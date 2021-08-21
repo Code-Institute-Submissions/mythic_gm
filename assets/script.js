@@ -29,6 +29,7 @@ let sceneButton = document.getElementById('scene-button')
 let sceneContent = document.getElementById('scene');
 let listButton = document.getElementById('list-button')
 let listsContent = document.getElementById('list')
+oracleButton.classList.add("active")
 
 //set initial view - oracle tab open and the other tabs closed
 listsContent.style.display = "none";
@@ -44,17 +45,26 @@ function closeTabs() {
 //open tabs
 oracleButton.onclick = function() { 
   closeTabs();
-  oracleContent.style.display = "block"
+  oracleContent.style.display = "block";
+  sceneButton.classList.remove("active");
+  listButton.classList.remove("active");
+  oracleButton.classList.add("active");
 }
 
 sceneButton.onclick = function() { 
   closeTabs();
   sceneContent.style.display = "block"
+  listButton.classList.remove("active");
+  oracleButton.classList.remove("active");
+  sceneButton.classList.add("active")
 }
 
 listButton.onclick = function() { 
   closeTabs();
   listsContent.style.display = "block"
+  oracleButton.classList.remove("active");
+  sceneButton.classList.remove("active")
+  listButton.classList.add("active")
 }
 
 
