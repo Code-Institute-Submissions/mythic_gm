@@ -14,30 +14,53 @@
 
 </head>
 <body>
-  <h1 id="logo">Mythic GM</h1>
+  <section>
+    <h1 id="logo">Mythic GM</h1>
 
   <!--How to use section contained in modal-->
-  <div id="how-to">
-    <!--To open modal-->
-    <button id="how-to-btn">How to use Mythic</button>
-    <!--Modal window-->
-    <div id="how-to-modal" class="modal">
-      <!--Content of modal-->
-      <div class="how-to-content">
-        <button class="close"><i class="far fa-times-circle"></i></button>
-        <p>The how to section text will go here. 
-          <br> Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div id="how-to">
+      <!--To open modal-->
+      <button id="how-to-btn">How to use Mythic</button>
+      <!--Modal window-->
+      <div id="how-to-modal" class="modal">
+        <!--Content of modal-->
+        <div class="how-to-content">
+          <button class="close"><i class="far fa-times-circle"></i></button>
+          <p>The how to section text will go here. 
+            <br> Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+              dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
       </div>
     </div>
-  </div>
-  
-  <section>Emulator goes here</section>
+    <i id="sound" class="fas fa-volume-mute"><audio src=""></audio></i>
+  </section>
+  <nav id="nav-container">
+     <!--tab links-->
+     <div class="tab">
+      <button class="tablink" onclick="openTab(event, 'Oracle')">Oracle</button>
+      <button class="tablink" onclick="openTab(event, 'Scene')">Scene</button>
+      <button class="tablink" onclick="openTab(event, 'lists')">Lists</button>
+    </div>
+  </nav>
+  <section id="emulator">
+    <div id="emulator-window">
+      <!--tab content-->
+      <div id="oracle" class="tabcontent">
+        <p>oracle contents</p>
+      </div>
+      <div id="scene" class="tabcontent">
+        <p>scenes content</p>
+      </div>
+      <div id="list" class="tabcontent">
+        <p>list contents</p>
+      </div>
+    </div>
+  </section>
 
   <footer>Footer section</footer>
 

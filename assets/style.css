@@ -4,10 +4,12 @@
   font-family: 'Raleway', sans-serif;
 }
 
-body {
-  background-image: url('images/background.jpg');
+html {
+  background: url('images/background.jpg')no-repeat center center fixed;
   background-size: cover;
-  background-repeat: no-repeat;
+}
+
+body {
   font-family: 'Raleway', sans-serif;
 }
 
@@ -16,6 +18,10 @@ body {
   font-size: 3.5em;
   margin-top: 10px;
   font-family: 'Cinzel Decorative', cursive;
+}
+
+#sound {
+  font-size: 3.5em;
 }
 
 /* Container to make modal button responsive and centered*/
@@ -34,6 +40,7 @@ body {
   font-size: 1.5em;
   transition: all 0.2s;
   color: whitesmoke;
+  cursor: pointer;
 }
 #how-to-btn:hover {
   background-color: rgba(65, 62, 62, 0.65);
@@ -74,3 +81,58 @@ body {
   cursor: pointer;
 }
 
+/*tabs*/
+#nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tab {
+  overflow: hidden;
+  justify-self: flex-end;
+  width: 80%;
+}
+
+.tab button {
+  background-color: rgba(41, 38, 38, 0.65);
+  float: right;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  border-top-left-radius: 1.2em;
+  border-top-right-radius: 1.2em;
+  font-size: 1.2em;
+  color: whitesmoke;
+  transition: all 0.2s;
+}
+
+.tab button:hover {
+  background-color: rgba(65, 62, 62, 0.65);
+}
+
+.tab button.active {
+  padding: 16px 18px;
+}
+
+/*Emulator*/
+#emulator {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+}
+
+#emulator-window {
+  width: 80%;
+  height: 100%;
+  background-color: black;
+  color: whitesmoke;
+}
+
+.tabcontent {
+  
+  width: 80vw;
+  
+}
