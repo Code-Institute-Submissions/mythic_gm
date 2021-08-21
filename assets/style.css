@@ -82,7 +82,7 @@ body {
 }
 
 /*tabs*/
-#nav-container {
+#tab-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -100,7 +100,7 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 10px 16px;
   border-top-left-radius: 1.2em;
   border-top-right-radius: 1.2em;
   font-size: 1.2em;
