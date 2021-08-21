@@ -11,3 +11,9 @@ howToBtn.onclick = function() {
 closeHowTo.onclick = function() {
   HowToModal.style.display = "none"
 }
+
+window.onclick = function(event) {
+  if (event.target == HowToModal) {
+    HowToModal.style.display = "none";
+  }
+}
