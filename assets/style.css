@@ -22,6 +22,8 @@ body {
 
 #sound {
   font-size: 3.5em;
+  position: relative;
+  left: 10%;
 }
 
 /* Container to make modal button responsive and centered*/
@@ -41,6 +43,7 @@ body {
   transition: all 0.2s;
   color: whitesmoke;
   cursor: pointer;
+  font-family: 'Raleway', sans-serif;
 }
 #how-to-btn:hover {
   background-color: rgba(65, 62, 62, 0.65);
@@ -106,6 +109,7 @@ body {
   font-size: 1.2em;
   color: whitesmoke;
   transition: all 0.2s;
+  font-family: 'Raleway', sans-serif;
 }
 
 .tab button:hover {
@@ -129,10 +133,54 @@ body {
   height: 100%;
   background-color: black;
   color: whitesmoke;
+  position: relative;
 }
 
 .tabcontent {
-  
   width: 80vw;
-  
 }
+
+.tabcontent h1, h2, h3, button {
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+#oracle, #scene, #list {
+  display: flex;
+}
+
+/*oracle tab content*/
+
+#chaos {
+  margin-bottom: 10px;
+  width: 30%;
+  bottom: 0;
+  text-align: center;
+  padding: 10px;
+}
+
+.bottom-row {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.fate-qs {
+  width: 30%;
+  margin: 0 auto;
+}
+
+#question-btn, #event-btn {
+  background-color: rgba(184, 180, 180, 0.2);
+  padding: 10px;
+  border-radius: 1.1em;
+  text-decoration: none;
+  border: none;
+  font-size: 1.5em;
+  transition: all 0.2s;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+
+

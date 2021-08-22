@@ -45,7 +45,7 @@ function closeTabs() {
 //open tabs
 oracleButton.onclick = function() { 
   closeTabs();
-  oracleContent.style.display = "block";
+  oracleContent.style.display = "flex";
   sceneButton.classList.remove("active");
   listButton.classList.remove("active");
   oracleButton.classList.add("active");
@@ -53,7 +53,7 @@ oracleButton.onclick = function() {
 
 sceneButton.onclick = function() { 
   closeTabs();
-  sceneContent.style.display = "block"
+  sceneContent.style.display = "flex"
   listButton.classList.remove("active");
   oracleButton.classList.remove("active");
   sceneButton.classList.add("active")
@@ -61,7 +61,7 @@ sceneButton.onclick = function() {
 
 listButton.onclick = function() { 
   closeTabs();
-  listsContent.style.display = "block"
+  listsContent.style.display = "flex"
   oracleButton.classList.remove("active");
   sceneButton.classList.remove("active")
   listButton.classList.add("active")
