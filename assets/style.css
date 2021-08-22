@@ -76,6 +76,7 @@ body {
   font-size: 2em;
   text-decoration: none;
   border: none;
+  background-color: #e9e9e9;
 }
 
 .close:hover, .close:focus {
@@ -151,7 +152,6 @@ body {
 /*oracle tab content*/
 
 #chaos {
-  margin-bottom: 10px;
   width: 30%;
   bottom: 0;
   text-align: center;
@@ -168,11 +168,13 @@ body {
 
 .fate-qs {
   width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 #question-btn, #event-btn {
   background-color: rgba(184, 180, 180, 0.2);
-  padding: 10px;
+  padding: 2px;
   border-radius: 1.1em;
   text-decoration: none;
   border: none;
@@ -180,7 +182,14 @@ body {
   transition: all 0.2s;
   color: whitesmoke;
   cursor: pointer;
+  margin-bottom: 0;
+  height: 60px;
 }
+
+#question-btn:hover, #event-btn:hover {
+  background-color: rgba(184, 180, 180, 0.55);
+}
+
 
 #footer {
   display: flex;
@@ -191,5 +200,32 @@ body {
 #footer i {
   font-size: 2em;
   letter-spacing: 10px;
+}
+
+
+/*media queries*/
+
+@media screen and (max-width: 500px) {
+  #chaos, #question-btn, #event-btn {
+    font-size: 0.9em;
+  }
+  #how-to-btn {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  #chaos, .tab, #question-btn, #event-btn {
+    font-size: 0.68em;
+  }
+  #how-to-btn {
+    margin-top: 30px;
+  }
+
+  #sound {
+    left: 40%;
+    margin-bottom: 20px;
+  }
 }
 
