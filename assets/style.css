@@ -163,11 +163,11 @@ body {
   width: 100%;
   position: absolute;
   bottom: 0;
+  justify-content: space-between;
 }
 
 .fate-qs {
   width: 30%;
-  margin: 0 auto;
 }
 
 #question-btn, #event-btn {
@@ -182,5 +182,14 @@ body {
   cursor: pointer;
 }
 
+#footer {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
 
+#footer i {
+  font-size: 2em;
+  letter-spacing: 10px;
+}
 
