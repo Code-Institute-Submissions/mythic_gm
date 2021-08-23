@@ -53,18 +53,26 @@ oracleButton.onclick = function() {
 
 sceneButton.onclick = function() { 
   closeTabs();
-  sceneContent.style.display = "flex"
+  sceneContent.style.display = "flex";
   listButton.classList.remove("active");
   oracleButton.classList.remove("active");
-  sceneButton.classList.add("active")
+  sceneButton.classList.add("active");
 }
 
 listButton.onclick = function() { 
   closeTabs();
-  listsContent.style.display = "flex"
+  listsContent.style.display = "flex";
   oracleButton.classList.remove("active");
-  sceneButton.classList.remove("active")
-  listButton.classList.add("active")
+  sceneButton.classList.remove("active");
+  listButton.classList.add("active");
+}
+
+let displayBox = document.getElementById('text-display')
+let questionButton = document.getElementById('question-btn');
+
+
+questionButton.onclick = function () {
+  displayBox.innerHTML = "<p class='word'>Hello<br></p><p class='word'>CC</p>";
 }
 
 
