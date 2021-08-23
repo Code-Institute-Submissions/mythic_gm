@@ -167,18 +167,20 @@ body {
   font-size: 2em;
   font-family: 'Eater', cursive;
   color: transparent;
-  animation: blur 5s ease-out;
+  animation: blur 10s ease-out;
 }
 
-/* .word:nth-child(2) {
-	animation-delay: 0.1s;
-} */
+.word:nth-child(2) {
+	animation-delay: 2s;
+  animation-duration: 7.8s;
+}
 
 
 
 @keyframes blur {
-	0%	{text-shadow:  0 0 100px #fff; opacity:0;}
-	5%	{text-shadow:  0 0 90px #fff;}
+	0%	{text-shadow:  0 0 90px #fff; opacity:0;}
+	5%	{text-shadow:  0 0 80px #fff;}
+  10%	{text-shadow:  0 0 70px #fff;}
 	15%	{opacity: 1;}
 	20%	{text-shadow:  0 0 0px #fff;}
 	80%	{text-shadow:  0 0 0px #fff;}
