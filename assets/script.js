@@ -77,14 +77,10 @@ let questionButton = document.getElementById('question-btn');
 let oddsBox = document.getElementById('odds-modal')
 let oddsButton = document.getElementById('set-odds-button')
 
+// display the odds selector modal
 questionButton.onclick = function() {
   oddsBox.style.display = "flex";
 }
-
-oddsButton.onclick = function() {
-  oddsBox.style.display = "none";
-  displayBox.innerHTML = "<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3>"
-} 
 
 //text slide for odds div
 
@@ -107,6 +103,10 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
-
+// to display the output text in emulator window
+oddsButton.onclick = function() {
+  oddsBox.style.display = "none";
+  displayBox.innerHTML = "<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3>"
+} 
 
 
