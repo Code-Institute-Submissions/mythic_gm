@@ -63,54 +63,13 @@
           </div>
         </div>
 
+        <!--Emulator window bottom row of buttons-->
         <div class="bottom-row">
 
           <div id="chaos">
             <h2 id="chaos-txt">Chaos</h2>
             <h3 id="chaos-number">5</h3>
           </div>
-          
-          <div id="odds-modal" class="odds-modal">
-
-              <h3 id="odds-header">Set odds of yes answer</h3>
-            <div id="odds-container">
-              <div class="odds-slider">
-                <div class="odds-value">50/50</div>
-              </div>
-              <div class="odds-slider">
-                <div class="odds-value">Somewhat likely</div>
-              </div>
-              <div class="odds-slider">
-                <div class="odds-value">Likely</div>
-              </div>
-              <div class="odds-slider">
-                <div class="odds-value">Very Likely</div>
-              </div>
-              <div class="odds-slider">
-                <div class="odds-value">Near sure thing</div>
-              </div>
-              <div class="odds-slider">
-                <div class="odds-value">A sure thing</div>
-              </div>
-              <div class="odds-slider">
-                <div class="odds-value">Has to be</div>
-              </div>
-              <div class="odds-slider">
-                <div class="odds-value">Impossible</div>
-              </div>
-              <div class="odds-slider">
-                <div class="odds-value">Very unlikely</div>
-              </div>
-              <div class="odds-slider">
-                <div class="odds-value">Unlikely</div>
-              </div>
-               <!-- Next and previous buttons  -->
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <div id="set-odds"><button id="set-odds-button"><i class="fas fa-check-circle"></i></button></div>
-          </div>
-          
 
           <div class="fate-qs">
             <button id="question-btn">
@@ -123,7 +82,48 @@
               Event
             </button>
           </div>
-  
+          <!--This modal is for setting the odds and is initially not displayed-->
+          <div id="odds-modal" class="odds-modal">
+
+            <h3 id="odds-header">Set odds of yes answer</h3>
+          <div id="odds-container">
+            <div class="odds-slider">
+              <div class="odds-value">50/50</div>
+            </div>
+            <div class="odds-slider">
+              <div class="odds-value">Somewhat likely</div>
+            </div>
+            <div class="odds-slider">
+              <div class="odds-value">Likely</div>
+            </div>
+            <div class="odds-slider">
+              <div class="odds-value">Very Likely</div>
+            </div>
+            <div class="odds-slider">
+              <div class="odds-value">Near sure thing</div>
+            </div>
+            <div class="odds-slider">
+              <div class="odds-value">A sure thing</div>
+            </div>
+            <div class="odds-slider">
+              <div class="odds-value">Has to be</div>
+            </div>
+            <div class="odds-slider">
+              <div class="odds-value">Impossible</div>
+            </div>
+            <div class="odds-slider">
+              <div class="odds-value">Very unlikely</div>
+            </div>
+            <div class="odds-slider">
+              <div class="odds-value">Unlikely</div>
+            </div>
+             <!-- Next and previous buttons  -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <!--modal close/submit button-->
+          <div id="set-odds"><button id="set-odds-button"><i class="fas fa-check-circle"></i></button></div>
+          </div>
         </div>
   
         <div id="scene" class="tabcontent">
