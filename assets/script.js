@@ -110,3 +110,21 @@ oddsButton.onclick = function() {
 } 
 
 
+
+
+//fate chart arrays
+
+const impossible = [-20, 0, 0, 5, 5, 10, 15, 25, 50];
+const noWay = [0, 5, 5, 10, 15, 25, 35, 50, 75];
+const veryUnlikely = [5, 5, 10, 15, 25, 45, 50, 65, 85];
+const unlikely = [5, 10, 15, 20, 35, 50, 55, 75, 90];
+const fiftyFifty = [10, 15, 25, 35, 50, 65, 75, 85, 95];
+const somewhatLikely = [20, 25, 45, 50, 65, 80, 85, 90, 95];
+const likely = [25, 35, 50, 55, 75, 85, 90, 95, 100];
+const veryLikely = [45, 50, 65, 75, 85, 90, 95, 95, 105];
+const nearSureThing = [50, 55, 75, 80, 90, 95, 95, 100, 115];
+const aSureThing = [55, 65, 80, 85, 90, 95, 95, 110, 125];
+const hasToBe = [80, 85, 90, 95, 95, 100, 100, 130, 145];
+
+
+
