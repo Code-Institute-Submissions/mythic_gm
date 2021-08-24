@@ -126,5 +126,8 @@ const nearSureThing = [50, 55, 75, 80, 90, 95, 95, 100, 115];
 const aSureThing = [55, 65, 80, 85, 90, 95, 95, 110, 125];
 const hasToBe = [80, 85, 90, 95, 95, 100, 100, 130, 145];
 
+let chaosNumber = parseInt(document.getElementById("chaos-number").textContent) - 1;
+console.log(chaosNumber)
+
 
 
