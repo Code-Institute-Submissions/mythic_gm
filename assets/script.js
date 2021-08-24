@@ -71,12 +71,23 @@ listButton.onclick = function() {
 // variables
 let displayBox = document.getElementById('text-display')
 let questionButton = document.getElementById('question-btn');
-let oddsBox = document.getElementById('odds-container')
+let oddsBox = document.getElementById('odds-modal')
+let oddsButton = document.getElementById('set-odds-button')
 
-//function to display text
-questionButton.onclick = function () {
+questionButton.onclick = function() {
   oddsBox.style.display = "flex";
 }
+
+oddsButton.onclick = function() {
+  oddsBox.style.display = "none";
+  displayBox.innerHTML = "<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3>"
+}
+
+
+
+
+//click odds 
+
 
 
 //text slide for odds div
@@ -100,6 +111,6 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
-// displayBox.innerHTML = "<p class='word'>Hello<br></p><p class='word'>CC</p>";
+
 
 
