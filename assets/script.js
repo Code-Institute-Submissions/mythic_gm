@@ -42,7 +42,7 @@ function closeTabs() {
   }
 }
 
-//open tabs
+//open and close tabs
 oracleButton.onclick = function() { 
   closeTabs();
   oracleContent.style.display = "flex";
@@ -67,12 +67,39 @@ listButton.onclick = function() {
   listButton.classList.add("active");
 }
 
+// question fate button
+// variables
 let displayBox = document.getElementById('text-display')
 let questionButton = document.getElementById('question-btn');
+let oddsBox = document.getElementById('odds-container')
 
-
+//function to display text
 questionButton.onclick = function () {
-  displayBox.innerHTML = "<p class='word'>Hello<br></p><p class='word'>CC</p>";
+  oddsBox.style.display = "flex";
 }
+
+
+//text slide for odds div
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("odds-slider");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
+// displayBox.innerHTML = "<p class='word'>Hello<br></p><p class='word'>CC</p>";
 
 
