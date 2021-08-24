@@ -49,6 +49,7 @@ oracleButton.onclick = function() {
   sceneButton.classList.remove("active");
   listButton.classList.remove("active");
   oracleButton.classList.add("active");
+  displayBox.innerHTML = ""
 }
 
 sceneButton.onclick = function() { 
@@ -57,6 +58,7 @@ sceneButton.onclick = function() {
   listButton.classList.remove("active");
   oracleButton.classList.remove("active");
   sceneButton.classList.add("active");
+  displayBox.innerHTML = ""
 }
 
 listButton.onclick = function() { 
@@ -65,6 +67,7 @@ listButton.onclick = function() {
   oracleButton.classList.remove("active");
   sceneButton.classList.remove("active");
   listButton.classList.add("active");
+  displayBox.innerHTML = ""
 }
 
 // question fate button
@@ -81,14 +84,7 @@ questionButton.onclick = function() {
 oddsButton.onclick = function() {
   oddsBox.style.display = "none";
   displayBox.innerHTML = "<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3>"
-}
-
-
-
-
-//click odds 
-
-
+} 
 
 //text slide for odds div
 
