@@ -18,7 +18,6 @@ window.onclick = function(event) {
   }
 }
 
-
 // Tabs
 // declare variables - tab buttons and content of the tabs
 let activeTab;
