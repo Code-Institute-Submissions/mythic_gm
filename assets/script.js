@@ -76,6 +76,8 @@ let displayBox = document.getElementById('text-display')
 let questionButton = document.getElementById('question-btn');
 let oddsBox = document.getElementById('odds-modal')
 let oddsButton = document.getElementById('set-odds-button')
+let oddsValue = document.getElementsByClassName("odds-value")
+let chaosNumber = parseInt(document.getElementById("chaos-number").textContent) - 1;
 
 // display the odds selector modal
 questionButton.onclick = function() {
@@ -89,9 +91,10 @@ showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides(slideIndex += n)
 }
 
+//display odds value
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("odds-slider");
@@ -105,9 +108,22 @@ function showSlides(n) {
 
 // to display the output text in emulator window
 oddsButton.onclick = function() {
+  generateAnswer()
   oddsBox.style.display = "none";
-  displayBox.innerHTML = "<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3>"
+  
 } 
+
+function getOddsValue(n) {
+  var i;
+  var slides = document.getElementsByClassName("odds-slider");
+  let oddsValues = document.getElementsByClassName("odds-value");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  if (slideIndex === 1) {
+    return(oddsValues[n-1].innerHTML)
+  } else
+  return(oddsValues[n-1].innerHTML)
+}
 
 
 
@@ -126,8 +142,29 @@ const nearSureThing = [50, 55, 75, 80, 90, 95, 95, 100, 115];
 const aSureThing = [55, 65, 80, 85, 90, 95, 95, 110, 125];
 const hasToBe = [80, 85, 90, 95, 95, 100, 100, 130, 145];
 
-let chaosNumber = parseInt(document.getElementById("chaos-number").textContent) - 1;
-console.log(chaosNumber)
+
+
+function generateAnswer(){
+  let randomInt = (Math.floor(Math.random() * 100 +1 ));
+  
+  if (getOddsValue(slideIndex) === "Impossible"){
+    if (randomInt <= (fiftyFifty[chaosNumber]) && randomInt < (fiftyFifty[chaosNumber] / 5)){
+      displayBox.innerHTML = "<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3>";
+    } else if (randomInt <= (fiftyFifty[chaosNumber])) {
+      displayBox.innerHTML = "<h3 class='word'>Yes</h3>"
+    } else if (randomInt > (fiftyFifty[chaosNumber]) && randomInt >= (fiftyFifty[chaosNumber] / 5 + 81)){
+      displayBox.innerHTML = "<h3 class='word'>No</h3><h3 class='word'>Exceptional</h3>"
+    } else {
+      displayBox.innerHTML = "<h3 class='word'>No</h3>"
+    }
+  }
+}
+
+
+
+
+
+
 
 
 
