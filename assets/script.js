@@ -18,8 +18,8 @@ window.onclick = function(event) {
   }
 }
 
-// Open and close tab divs
 
+// Tabs
 // declare variables - tab buttons and content of the tabs
 let activeTab;
 let tablinks = document.getElementsByClassName('tabcontent');
@@ -84,7 +84,7 @@ questionButton.onclick = function() {
   oddsBox.style.display = "flex";
 }
 
-//text slide for odds div
+//text slider for odds div
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -94,7 +94,7 @@ function plusSlides(n) {
   showSlides(slideIndex += n)
 }
 
-//display odds value
+//display odds text
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("odds-slider");
@@ -105,13 +105,6 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
-
-// to display the output text in emulator window
-oddsButton.onclick = function() {
-  generatOddsAnswer()
-  generateAnswer()
-  oddsBox.style.display = "none";
-} 
 
 //fate chart functions
 
@@ -157,9 +150,10 @@ function generatOddsAnswer() {
 }
 
 // this function imitates the dice roll and generates the answer to the question. 
-// yes is below and up to the number and no is after the number.
+// yes is below and up to the number and no is after the number. 
 //the lower 1/5 of the number is exceptional yes, the upper 1/5 of the number is exceptional no
 //you can get the lower 1/5 by dividing by 5. the upper 1/5th by adding dividing by 5 and 81 to the answer.
+// The higher the chaos number the higher the likelyhood of a yes answer
 function generateAnswer(){
   
   let randomInt = (Math.floor(Math.random() * 100 +1 ));
@@ -175,7 +169,12 @@ function generateAnswer(){
     }
   }
 
-
+// to display the output text in emulator window
+oddsButton.onclick = function() {
+  generatOddsAnswer()
+  generateAnswer()
+  oddsBox.style.display = "none";
+} 
 
 
 
