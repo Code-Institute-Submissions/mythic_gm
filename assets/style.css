@@ -251,6 +251,7 @@ body {
 
 #odds-header {
   top: 40%;
+  text-align: center;
 }
 
 #set-odds {
@@ -337,6 +338,12 @@ body {
 
 /*media queries*/
 
+@media screen and (max-width: 750px) {
+  #odds-container {
+    width: 70%;
+  }
+}
+
 @media screen and (max-width: 500px) {
   #chaos, #question-btn, #event-btn {
     font-size: 0.9em;
@@ -345,9 +352,12 @@ body {
     margin-top: 60px;
     margin-bottom: 20px;
   }
+  #odds-header {
+    font-size: 1em;
+  }
 }
 
-@media screen and (max-width: 315px) {
+@media screen and (max-width: 345px) {
   #chaos, .tab, #question-btn, #event-btn {
     font-size: 0.68em;
   }
@@ -359,6 +369,28 @@ body {
     left: 40%;
     margin-bottom: 20px;
   }
+  #odds-container{
+    top: 55%;
+  }
+  #odds-header {
+    top: 45%;
+  }
+  #set-odds {
+    top: 65%;
+  }
+}
+
+@media screen and (max-width: 341px) {
+  #odds-container{
+    top: 65%;
+  }
+  #odds-header {
+    top: 55%;
+  }
+  #set-odds {
+    top: 75%;
+  }
+  
 }
 
 
