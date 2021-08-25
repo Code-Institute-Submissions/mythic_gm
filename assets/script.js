@@ -76,7 +76,7 @@ let displayBox = document.getElementById('text-display')
 let questionButton = document.getElementById('question-btn');
 let oddsBox = document.getElementById('odds-modal')
 let oddsButton = document.getElementById('set-odds-button')
-let oddsValue = document.getElementsByClassName("odds-value")
+let oddsValue = document.getElementsByClassName("odds-value");
 let chaosNumber = parseInt(document.getElementById("chaos-number").textContent) - 1;
 
 // display the odds selector modal
@@ -108,11 +108,16 @@ function showSlides(n) {
 
 // to display the output text in emulator window
 oddsButton.onclick = function() {
+  generatOddsAnswer()
   generateAnswer()
   oddsBox.style.display = "none";
-  
 } 
 
+//fate chart functions
+
+let oddIs;
+
+//this funciton gets the inner html string of the text slider on the odds modal window
 function getOddsValue(n) {
   var i;
   var slides = document.getElementsByClassName("odds-slider");
@@ -125,40 +130,52 @@ function getOddsValue(n) {
   return(oddsValues[n-1].innerHTML)
 }
 
+//this funciton links an array of numbers that represent the odds of the outcome coming out as a yes
+function generatOddsAnswer() {
+  if (getOddsValue(slideIndex) === "50/50"){
+    oddIs = [10, 15, 25, 35, 50, 65, 75, 85, 95];
+  } else if (getOddsValue(slideIndex) === "Somewhat likely"){
+    oddIs = [20, 25, 45, 50, 65, 80, 85, 90, 95];
+  }else if (getOddsValue(slideIndex) === "likely"){
+    oddIs = [25, 35, 50, 55, 75, 85, 90, 95, 100];
+  }else if (getOddsValue(slideIndex) === "Very likely"){
+    oddIs = [45, 50, 65, 75, 85, 90, 95, 95, 105];
+  }else if (getOddsValue(slideIndex) === "Near sure thing"){
+    oddIs = [50, 55, 75, 80, 90, 95, 95, 100, 115];
+  }else if (getOddsValue(slideIndex) === "A sure thing"){
+    oddIs = [55, 65, 80, 85, 90, 95, 95, 110, 125];
+  }else if (getOddsValue(slideIndex) === "Has to be"){
+    oddIs = [80, 85, 90, 95, 95, 100, 100, 130, 145];
+  }else if (getOddsValue(slideIndex) === "Unlikely"){
+    oddIs = [5, 10, 15, 20, 35, 50, 55, 75, 90];
+  }else if (getOddsValue(slideIndex) === "Very unlikely"){
+    oddIs = [5, 5, 10, 15, 25, 45, 50, 65, 85];
+  }else if (getOddsValue(slideIndex) === "Impossible"){
+    oddIs = [-20, 0, 0, 5, 5, 10, 15, 25, 50];
+  }
 
+}
 
-
-//fate chart arrays
-
-const impossible = [-20, 0, 0, 5, 5, 10, 15, 25, 50];
-const noWay = [0, 5, 5, 10, 15, 25, 35, 50, 75];
-const veryUnlikely = [5, 5, 10, 15, 25, 45, 50, 65, 85];
-const unlikely = [5, 10, 15, 20, 35, 50, 55, 75, 90];
-const fiftyFifty = [10, 15, 25, 35, 50, 65, 75, 85, 95];
-const somewhatLikely = [20, 25, 45, 50, 65, 80, 85, 90, 95];
-const likely = [25, 35, 50, 55, 75, 85, 90, 95, 100];
-const veryLikely = [45, 50, 65, 75, 85, 90, 95, 95, 105];
-const nearSureThing = [50, 55, 75, 80, 90, 95, 95, 100, 115];
-const aSureThing = [55, 65, 80, 85, 90, 95, 95, 110, 125];
-const hasToBe = [80, 85, 90, 95, 95, 100, 100, 130, 145];
-
-
-
+// this function imitates the dice roll and generates the answer to the question. 
+// yes is below and up to the number and no is after the number.
+//the lower 1/5 of the number is exceptional yes, the upper 1/5 of the number is exceptional no
+//you can get the lower 1/5 by dividing by 5. the upper 1/5th by adding dividing by 5 and 81 to the answer.
 function generateAnswer(){
-  let randomInt = (Math.floor(Math.random() * 100 +1 ));
   
-  if (getOddsValue(slideIndex) === "Impossible"){
-    if (randomInt <= (fiftyFifty[chaosNumber]) && randomInt < (fiftyFifty[chaosNumber] / 5)){
+  let randomInt = (Math.floor(Math.random() * 100 +1 ));
+  console.log(randomInt)
+    if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
       displayBox.innerHTML = "<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3>";
-    } else if (randomInt <= (fiftyFifty[chaosNumber])) {
+    } else if (randomInt <= (oddIs[chaosNumber])) {
       displayBox.innerHTML = "<h3 class='word'>Yes</h3>"
-    } else if (randomInt > (fiftyFifty[chaosNumber]) && randomInt >= (fiftyFifty[chaosNumber] / 5 + 81)){
+    } else if (randomInt > (oddIs[chaosNumber]) && randomInt >= (oddIs[chaosNumber] / 5 + 81)){
       displayBox.innerHTML = "<h3 class='word'>No</h3><h3 class='word'>Exceptional</h3>"
     } else {
       displayBox.innerHTML = "<h3 class='word'>No</h3>"
     }
   }
-}
+
+
 
 
 
