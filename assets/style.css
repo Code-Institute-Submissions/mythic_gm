@@ -239,7 +239,7 @@ body {
   color: whitesmoke;
 }
 #odds-container {
-  top: 50%;
+  top: 30%;
   cursor: initial;
   background-color: rgba(184, 180, 180, 0.2);
   padding: 2px;
@@ -250,12 +250,12 @@ body {
 }
 
 #odds-header {
-  top: 40%;
+  top: 10%;
   text-align: center;
 }
 
 #set-odds {
-  top: 62%;
+  top: 58%;
 }
 
 #set-odds-button {
@@ -305,7 +305,7 @@ body {
 
 .odds-modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
+  position: absolute; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
@@ -342,6 +342,9 @@ body {
   #odds-container {
     width: 70%;
   }
+  #odds-header {
+    font-size: 1.3em;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -357,6 +360,17 @@ body {
   }
 }
 
+@media screen and (max-height: 660px) {
+  #odds-header, #odds-container, #set-odds {
+    font-size: 1em;
+    height: 40px;
+  }
+
+  .prev, .next {
+    top: -10%;
+  }
+}
+
 @media screen and (max-width: 345px) {
   #chaos, .tab, #question-btn, #event-btn {
     font-size: 0.68em;
@@ -369,29 +383,7 @@ body {
     left: 40%;
     margin-bottom: 20px;
   }
-  #odds-container{
-    top: 55%;
-  }
-  #odds-header {
-    top: 45%;
-  }
-  #set-odds {
-    top: 65%;
-  }
-}
 
-@media screen and (max-width: 341px) {
-  #odds-container{
-    top: 65%;
-  }
-  #odds-header {
-    top: 55%;
-  }
-  #set-odds {
-    top: 75%;
-  }
-  
-}
 
 
  
