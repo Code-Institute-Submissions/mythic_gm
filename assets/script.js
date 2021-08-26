@@ -123,7 +123,7 @@ function getOddsValue(n) {
 }
 
 //this funciton links an array of numbers that represent the odds of the outcome coming out as a yes
-function generatOddsAnswer() {
+function generatOddsValue() {
   if (getOddsValue(slideIndex) === "50/50"){
     oddIs = [10, 15, 25, 35, 50, 65, 75, 85, 95];
   } else if (getOddsValue(slideIndex) === "Somewhat likely"){
@@ -152,11 +152,17 @@ function generatOddsAnswer() {
 // yes is below and up to the number and no is after the number. 
 //the lower 1/5 of the number is exceptional yes, the upper 1/5 of the number is exceptional no
 //you can get the lower 1/5 by dividing by 5. the upper 1/5th by adding dividing by 5 and 81 to the answer.
+// (first 4/5 of 100 = 0 - 80 & last 1/5th is 81-100)
 // The higher the chaos number the higher the likelyhood of a yes answer
+// for the purpose of validating if outcome is correct - the random number is printed to console.
 function generateAnswer(){
   
   let randomInt = (Math.floor(Math.random() * 100 +1 ));
   console.log(randomInt)
+  if(randomInt % 11 == 0 && (randomInt / 11) < (chaosNumber +1)){
+    console.log('true')
+    randomEventAnswer();
+  } else {
     if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
       displayBox.innerHTML = "<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3>";
     } else if (randomInt <= (oddIs[chaosNumber])) {
@@ -167,20 +173,41 @@ function generateAnswer(){
       displayBox.innerHTML = "<h3 class='word'>No</h3>"
     }
   }
+}
+
+  function randomEventAnswer() {
+    let randomIntFocus= (Math.floor(Math.random() * 11));
+    console.log(randomIntFocus)
+    let eventFocusValue = eventFocus[randomIntFocus];
+    let randomInt = (Math.floor(Math.random() * 100 +1 ));
+    console.log(randomInt)
+    if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
+      displayBox.innerHTML = `<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`;
+    } else if (randomInt <= (oddIs[chaosNumber])) {
+      displayBox.innerHTML = `<h3 class='word'>Yes</h3><h3 class='word'></h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
+    } else if (randomInt > (oddIs[chaosNumber]) && randomInt >= (oddIs[chaosNumber] / 5 + 81)){
+      displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
+    } else {
+      displayBox.innerHTML = `<h3 class='word'>No</h3>h3 class='word'></h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
+    }
+  }
+
+  const eventFocus = ['Remote event','NPC action','Introduce a new NPC','Move toward a thread','Move away from a thread',
+    'Close a thread','PC negative','PC positive','Ambiguous event','NPC negative','NPC positive']
 
 // to display the output text in emulator window
 oddsButton.onclick = function() {
-  generatOddsAnswer()
+  generatOddsValue()
   generateAnswer()
   oddsBox.style.display = "none";
 } 
 
-
+// generating events
 //event button 
 
 let eventButton = document.getElementById('event-btn');
 
-//event meaning: 
+//event meaning: Action array
 
 const eventAction = ["Attainment","Starting","Neglect","Fight","Recruit","Triumph","Violate","Oppose","Malice","Communicate",
   "Persecute","Increase","Decrease","Abandon","Gratify","Inquire","Antagonise","Move","Waste","Truce","Release","Befriend",
@@ -191,6 +218,8 @@ const eventAction = ["Attainment","Starting","Neglect","Fight","Recruit","Triump
   "Refuse","Mistrust","Deceive","Cruelty","Intolerance","Trust","Excitement","Activity","Assist","Care","Negligence","Passion",
   "Work hard","Control","Attract","Failure","Pursue","Vengeance","Proceedings","Dispute","Punish","Guide","Transform",
   "Overthrow","Oppress","Change"]
+
+//event meaning: Subject array
 
 const eventSubject = ["Goals", "Dreams", "Environment", "Outside", "Inside","Reality",
   "Allies","Enemies","Evil","Good","Emotions","Opposition","War","Peace","The innocent","Love","The spiritual",
@@ -203,6 +232,8 @@ const eventSubject = ["Goals", "Dreams", "Environment", "Outside", "Inside","Rea
   "Technology","Hope","Magic","Illusions","Portals","Danger","Weapons","Animals","Weather","Elements","Nature","The public","Leadership","Fame",
   "Anger","Information"]
 
+  // this funciton will take a random word from eventMeaning and EventSubject array, and display them on the display box when
+  // event button is clicked
 eventButton.onclick = function(){
   var randomIntAction = (Math.floor(Math.random() * 100 +1 ));
   var action = eventAction[randomIntAction];
@@ -210,12 +241,4 @@ eventButton.onclick = function(){
   var subject = eventSubject[randomIntSubject];
   displayBox.innerHTML = `<h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`;
 }
-
-
-
-
-
-
-
-
 

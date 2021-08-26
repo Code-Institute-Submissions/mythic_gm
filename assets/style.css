@@ -167,12 +167,22 @@ body {
   font-size: 2em;
   font-family: 'Eater', cursive;
   color: transparent;
-  animation: blur 10s ease-out;
+  animation: blur 7s ease-out;
 }
 
 .word:nth-child(2) {
 	animation-delay: 2s;
-  animation-duration: 7.8s;
+  animation-duration: 4.8s;
+}
+
+.word:nth-child(3) {
+	animation-delay: 5.7s;
+  animation-duration: 8s;
+}
+
+.word:nth-child(4) {
+	animation-delay: 7.7s;
+  animation-duration: 6.3s;
 }
 
 @keyframes blur {
