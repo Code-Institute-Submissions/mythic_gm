@@ -83,6 +83,13 @@ questionButton.onclick = function() {
   oddsBox.style.display = "flex";
 }
 
+// close it
+window.onclick = function(event) {
+  if (event.target == oddsBox) {
+    oddsBox.style.display = "none";
+  }
+}
+
 //text slider for odds div
 
 let slideIndex = 1;
@@ -188,7 +195,7 @@ function generateAnswer(){
     } else if (randomInt > (oddIs[chaosNumber]) && randomInt >= (oddIs[chaosNumber] / 5 + 81)){
       displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
     } else {
-      displayBox.innerHTML = `<h3 class='word'>No</h3>h3 class='word'></h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
+      displayBox.innerHTML = `<h3 class='word'>No</h3<h3 class='word'></h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
     }
   }
 
@@ -241,4 +248,5 @@ eventButton.onclick = function(){
   var subject = eventSubject[randomIntSubject];
   displayBox.innerHTML = `<h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`;
 }
+
 
