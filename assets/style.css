@@ -151,6 +151,14 @@ body {
 
 /*oracle tab content*/
 
+#chaos {
+  width: 25%;
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  color: whitesmoke;
+}
+
 /*text reveal box*/
 
 #text-window {
@@ -198,12 +206,6 @@ body {
 }
 
 /*bottom row*/
-#chaos {
-  width: 30%;
-  bottom: 0;
-  text-align: center;
-  padding: 10px;
-}
 
 .bottom-row {
   display: flex;
@@ -219,7 +221,7 @@ body {
   justify-content: center;
 }
 
-#question-btn, #event-btn, #title {
+#question-btn, #event-btn, #title, #scene-btn {
   background-color: rgba(184, 180, 180, 0.2);
   padding: 2px;
   border-radius: 1.1em;
@@ -229,7 +231,7 @@ body {
   transition: all 0.2s;
   color: whitesmoke;
   cursor: pointer;
-  margin-bottom: 0;
+  margin-bottom: 5px;
   height: 60px;
 }
 
@@ -360,8 +362,11 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  #chaos, #question-btn, #event-btn {
+  #chaos, .fate-qs {
     font-size: 0.9em;
+  }
+  #chaos {
+    margin-left: 10px;
   }
   #how-to-btn {
     margin-top: 60px;
@@ -384,7 +389,7 @@ body {
 }
 
 @media screen and (max-width: 375px) {
-  #chaos, .tab, #question-btn, #event-btn {
+  #chaos, .tab, .fate-qs {
     font-size: 0.68em;
   }
 
@@ -425,7 +430,7 @@ body {
   .word {
     font-size: 1.5em;
   }
-  #chaos, #question-btn, #event-btn {
+  #chaos, .fate-qs {
     font-size: 0.68em;
     height: 30px;
   }
