@@ -69,6 +69,29 @@ listButton.onclick = function() {
   displayBox.innerHTML = ""
 }
 
+// Chaos Number 
+let chaosNumber = parseInt(document.getElementById("chaos-number").textContent) - 1;
+let chaosNumberString = document.getElementById("chaos-number").innerHTML
+
+
+
+// scene button 
+let sceneGenerateButton = document.getElementById("scene-btn");
+
+sceneGenerateButton.onclick = function() {
+  let randomInt = Math.floor(Math.random() * 10);
+  if (randomInt > chaosNumber){
+    displayBox.innerHTML = "<h3 class='word'>No change</h3>";
+  } else if(randomInt % 2 == 0){
+    let randomIntFocus= (Math.floor(Math.random() * 11));
+    console.log(randomIntFocus)
+    let eventFocusValue = eventFocus[randomIntFocus];
+    displayBox.innerHTML = `<h3 class='word'>Scene interrupted</h3><h3 class='word'>${eventFocusValue}</h3>`
+  } else {
+    displayBox.innerHTML = "<h3 class='word'>Scene Altered</h3>";
+  }
+}
+
 // question fate button
 // variables
 let displayBox = document.getElementById('text-display')
@@ -76,7 +99,7 @@ let questionButton = document.getElementById('question-btn');
 let oddsBox = document.getElementById('odds-modal')
 let oddsButton = document.getElementById('set-odds-button')
 let oddsValue = document.getElementsByClassName("odds-value");
-let chaosNumber = parseInt(document.getElementById("chaos-number").textContent) - 1;
+
 
 // display the odds selector modal
 questionButton.onclick = function() {
@@ -191,11 +214,11 @@ function generateAnswer(){
     if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
       displayBox.innerHTML = `<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`;
     } else if (randomInt <= (oddIs[chaosNumber])) {
-      displayBox.innerHTML = `<h3 class='word'>Yes</h3><h3 class='word'></h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
+      displayBox.innerHTML = `<h3 class='word'>Yes</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
     } else if (randomInt > (oddIs[chaosNumber]) && randomInt >= (oddIs[chaosNumber] / 5 + 81)){
       displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
     } else {
-      displayBox.innerHTML = `<h3 class='word'>No</h3<h3 class='word'></h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
+      displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
     }
   }
 
