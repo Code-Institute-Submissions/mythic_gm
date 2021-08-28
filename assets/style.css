@@ -159,6 +159,22 @@ body {
   color: whitesmoke;
 }
 
+#chaos-next, #chaos-prev {
+  cursor: pointer;
+  position: relative;
+  bottom: 20px;
+  width: auto;
+  padding: 10px;
+  color: whitesmoke;
+  font-size: 12px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+#chaos-prev:hover, #chaos-next:hover {
+  color: rgba(184, 180, 180, 0.55);
+}
+
 /*text reveal box*/
 
 #text-window {
@@ -304,7 +320,7 @@ body {
 }
 
 /* Position the "next button" to the right */
-.next {
+.next{
   right: 0;
   border-radius: 3px 0 0 3px;
 }
@@ -379,6 +395,10 @@ body {
   .odds-value {
     font-size: .8em;
   }
+  #chaos-next, #chaos-prev {
+    padding: 5px;
+    font-size: 8px;
+  }
 }
 
 @media screen and (max-width: 400px){
@@ -403,6 +423,9 @@ body {
   }
   .odds-value {
     font-size: 0.7em;
+  }
+  #chaos-prev, #chaos-next {
+    padding: 4px;
   }
 }
 

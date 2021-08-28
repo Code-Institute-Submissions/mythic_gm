@@ -71,8 +71,31 @@ listButton.onclick = function() {
 
 // Chaos Number 
 let chaosNumber = parseInt(document.getElementById("chaos-number").textContent) - 1;
-let chaosNumberString = document.getElementById("chaos-number").innerHTML
+let chaosNumberDisplay = parseInt(document.getElementById("chaos-number").textContent);
+let chaosPrev = document.getElementById('chaos-prev');
+let chaosNext = document.getElementById('chaos-next');
 
+chaosPrev.onclick = function() {
+  if(chaosNumberDisplay > 1){
+    chaosNumberDisplay -= 1;
+  document.getElementById("chaos-number").innerHTML = `${chaosNumberDisplay}`
+  }
+  if(chaosNumberDisplay < 9){
+    document.getElementById("chaos-number").style.color = "whitesmoke";
+    document.getElementById("chaos-txt").style.color = "whitesmoke";
+  }
+}
+
+chaosNext.onclick = function() {
+  if(chaosNumberDisplay < 9){
+    chaosNumberDisplay += 1;
+  document.getElementById("chaos-number").innerHTML = `${chaosNumberDisplay}`
+  }
+  if(chaosNumberDisplay == 9){
+    document.getElementById("chaos-number").style.color = "#bb0a1e";
+    document.getElementById("chaos-txt").style.color = "#bb0a1e";
+  }
+}
 
 
 // scene button 
@@ -80,11 +103,10 @@ let sceneGenerateButton = document.getElementById("scene-btn");
 
 sceneGenerateButton.onclick = function() {
   let randomInt = Math.floor(Math.random() * 10);
-  if (randomInt > chaosNumber){
+  if (randomInt > chaosNumberDisplay){
     displayBox.innerHTML = "<h3 class='word'>No change</h3>";
   } else if(randomInt % 2 == 0){
     let randomIntFocus= (Math.floor(Math.random() * 11));
-    console.log(randomIntFocus)
     let eventFocusValue = eventFocus[randomIntFocus];
     displayBox.innerHTML = `<h3 class='word'>Scene interrupted</h3><h3 class='word'>${eventFocusValue}</h3>`
   } else {
