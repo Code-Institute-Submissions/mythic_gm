@@ -9,6 +9,10 @@ html {
   background-size: cover;
 }
 
+li {
+  list-style-type: none;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
 }
@@ -338,27 +342,113 @@ body {
 }
 
 .odds-modal {
-  display: none; /* Hidden by default */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none; 
+  position: absolute; 
+  z-index: 1; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
 
-/* Modal Content/Box */
+
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto; 
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
 }
 
+
+/* List tab content */
+
+#list-container {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+}
+
+#characters {
+  width: 70%;
+  height: 100%;
+}
+
+
+.header {
+  padding: 25px 0 0;
+  color: whitesmoke;
+  text-align: center;
+  width: 70%;
+}
+
+input {
+  border: none;
+  width: 70%;
+  padding: 5px;
+  margin: 0 2.5%;
+  display: inline-block;
+  font-size: 16px;
+  background-color: black;
+  color: whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+  outline: none;
+}
+
+.addBtn {
+  padding: 10px;
+  color: whitesmoke;
+  display: inline-block;
+  text-align: center;
+  font-size: 2em;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  background-color: rgba(0,0,0,0.1);
+}
+
+/* .addBtn:hover {
+
+} */
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  color: whitesmoke;
+  padding: 12px 8px 12px 40px;
+  font-size: 1.5em;
+  transition: 0.2s;
+  width: 70%;
+  margin: 0 5%;
+}
+
+#threads {
+ width: 30%;
+ height: 100%;
+}
+
+/* footer */
 #footer {
   display: flex;
   justify-content: center;
