@@ -294,4 +294,69 @@ eventButton.onclick = function(){
   displayBox.innerHTML = `<h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`;
 }
 
+// close button for list items
+let close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// add to the character list
+let charAddBtn = document.getElementById("character-btn")
+charAddBtn.onclick = function() {
+  var li = document.createElement("LI");
+  var inputValue = document.getElementById("char-input").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("char-ul").appendChild(li);
+  }
+  document.getElementById("char-input").value = "";
+
+  var span = document.createElement("span");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+
+// add to the thread list 
+let threadAddBtn = document.getElementById("thread-btn")
+threadAddBtn.onclick = function() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("thread-input").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("thread-ul").appendChild(li);
+  }
+  document.getElementById("thread-input").value = "";
+
+  var span = document.createElement("span");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
 
