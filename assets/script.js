@@ -1,7 +1,7 @@
 // get how to section modal elements
 let HowToModal = document.getElementById('how-to-modal');
 let howToBtn = document.getElementById('how-to-btn');
-let closeHowTo = document.getElementsByClassName('close')[0];
+let closeHowTo = document.getElementById('close-how-to');
 
 //open and close how to modal
 howToBtn.onclick = function() {
@@ -311,17 +311,34 @@ function addScene() {
   inputOne.setAttribute("maxlength", "15")
   inputOne.setAttribute("size", "5")
   var inputTwo = document.createElement('textarea');
+  inputTwo.setAttribute("placeholder", "scene text ..." )
   var scene = document.createElement('div');
   scene.className = ('scene-box')
   scene.appendChild(inputOne)
   scene.appendChild(inputTwo)
+  var span = document.createElement("span");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "scene-close";
+  span.appendChild(txt);
+  scene.appendChild(span);
   sceneWindow.appendChild(scene);
+
+  for (i = 0; i < sceneCloseBtn.length; i++) {
+    sceneCloseBtn[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
 }
 
-
- 
-
-
+let sceneCloseBtn = document.getElementsByClassName('scene-close');
+var i;
+for (i = 0; i < sceneCloseBtn.length; i++) {
+  sceneCloseBtn[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
 
 //list tab script
 
