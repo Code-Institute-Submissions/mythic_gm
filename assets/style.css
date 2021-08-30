@@ -375,8 +375,20 @@ body {
 #characters {
   width: 70%;
   height: 100%;
+  overflow: auto;
 }
 
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: whitesmoke;
+}
 
 .header {
   padding: 25px 0 0;
@@ -439,18 +451,16 @@ ul li {
   padding: 12px 8px 12px 40px;
   font-size: 1.5em;
   transition: 0.2s;
-  width: 32.5%;
+  width: 60%;
   margin: 0 2.5%;
   display: inline-block;
 }
 
-.checked {
-  text-decoration: line-through;
-}
 
 #threads {
  width: 30%;
  height: 100%;
+ overflow: auto;
 }
 
 /* footer */
