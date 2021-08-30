@@ -61,7 +61,6 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0,0,0,0.4);
 }
 
@@ -70,8 +69,14 @@ body {
   padding: 20px;
   border: 1px solid #888;
   width: 70%;
+  height: 70vh;
   border-radius: 2em;
   background-color: #e9e9e9;
+  overflow-y: scroll;
+}
+
+.how-to-content p, h3 {
+  text-align: center;
 }
 
 /*close button in modal*/
