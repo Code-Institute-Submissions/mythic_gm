@@ -245,7 +245,7 @@ body {
   justify-content: center;
 }
 
-#question-btn, #event-btn, #title, #scene-btn {
+#question-btn, #event-btn, #title, #scene-btn, #add-scene-btn {
   background-color: rgba(184, 180, 180, 0.2);
   padding: 2px;
   border-radius: 1.1em;
@@ -364,6 +364,37 @@ body {
   width: 80%;
 }
 
+/* scene tab content */
+
+#scene-window {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  padding: 2.5% 0 2.5% 10%;
+}
+
+.scene-box {
+  width: 30%;;
+  height: 200px;
+  margin: 2px;
+  border: 1px solid white;
+  border-radius: 1.1em;
+}
+
+.scene-box input {
+  display: block;
+  margin: 0 auto;
+
+}
+
+#scene-bottom-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 /* List tab content */
 

@@ -294,6 +294,37 @@ eventButton.onclick = function(){
   displayBox.innerHTML = `<h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`;
 }
 
+//scene tab script 
+
+let addSceneButton = document.getElementById('add-scene-btn');
+let sceneWindow = document.getElementById('scene-window')
+
+//create new scene div
+addSceneButton.onclick = function() {
+  addScene();
+}
+
+function addScene() {
+  var inputOne = document.createElement('input');
+  inputOne.setAttribute("type", "text");
+  inputOne.setAttribute("placeholder", "scene#" )
+  inputOne.setAttribute("maxlength", "15")
+  inputOne.setAttribute("size", "5")
+  var inputTwo = document.createElement('textarea');
+  var scene = document.createElement('div');
+  scene.className = ('scene-box')
+  scene.appendChild(inputOne)
+  scene.appendChild(inputTwo)
+  sceneWindow.appendChild(scene);
+}
+
+
+ 
+
+
+
+//list tab script
+
 // close button for list items
 let close = document.getElementsByClassName("close");
 var i;
