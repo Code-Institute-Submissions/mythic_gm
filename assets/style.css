@@ -24,12 +24,6 @@ body {
   font-family: 'Cinzel Decorative', cursive;
 }
 
-#sound {
-  font-size: 3.5em;
-  position: relative;
-  left: 10%;
-}
-
 /* Container to make modal button responsive and centered*/
 #how-to {
   display: flex;
@@ -37,7 +31,7 @@ body {
 }
 
 #how-to-btn {
-  margin-top: 90px;
+  margin: 50px 0 ;
   background-color: rgba(41, 38, 38, 0.65);
   padding: 10px;
   border-radius: 2em;

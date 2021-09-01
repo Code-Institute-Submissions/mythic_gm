@@ -27,8 +27,14 @@ let listsContent = document.getElementById('list')
 sceneContent.style.display = "none"
 listsContent.style.display = "none"
 
+// closing display when another button is clicked
+function cancel(){
+  displayBox.innerHTML = "";
+}
+
 //Open tab - close other tab and remove active class. add active class to new tab
 function openTab(evt, tabName) {
+  cancel()
   for(let i = 0; i < tabcontent.length; i++){
     tabcontent[i].style.display = "none";
   }
@@ -64,11 +70,6 @@ chaosNext.onclick = function() {
     document.getElementById("chaos-number").style.color = "#bb0a1e";
     document.getElementById("chaos-txt").style.color = "#bb0a1e";
   }
-}
-
-// closing display when another button is clicked
-function cancel(){
-  displayBox.innerHTML = "";
 }
 
 // scene button 
