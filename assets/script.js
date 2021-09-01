@@ -335,10 +335,10 @@ charAddBtn.onclick = function() {
   var inputValue = document.getElementById("char-input").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
+  if (inputValue.match(/[0-9a-zA-z]/g)) {
     document.getElementById("char-ul").appendChild(li);
+  } else {
+    alert("You must write something!");
   }
   document.getElementById("char-input").value = "";
 
@@ -363,10 +363,10 @@ threadAddBtn.onclick = function() {
   var inputValue = document.getElementById("thread-input").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
+  if (inputValue.match(/[0-9a-zA-z]/g)) {
     document.getElementById("thread-ul").appendChild(li);
+  } else {
+    alert("You must write something!");
   }
   document.getElementById("thread-input").value = "";
 
@@ -383,4 +383,6 @@ threadAddBtn.onclick = function() {
     }
   }
 }
+
+
 
