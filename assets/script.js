@@ -1,34 +1,31 @@
 // get how to section modal elements
-let HowToModal = document.getElementById('how-to-modal');
+let howToModal = document.getElementById('how-to-modal');
 let howToBtn = document.getElementById('how-to-btn');
 let closeHowTo = document.getElementById('close-how-to');
 
 //open and close how to modal
 howToBtn.onclick = function() {
-  HowToModal.style.display = "initial";
+  howToModal.style.display = "initial";
 }
 
 closeHowTo.onclick = function() {
-  HowToModal.style.display = "none"
+  howToModal.style.display = "none"
 }
-
-// window.onclick = function(event) {
-//   if (event.target == HowToModal) {
-//     HowToModal.style.display = "none";
-//   }
-// }
 
 // Tabs
 // declare variables - tab buttons and content of the tabs
-let activeTab;
 let tablinks = document.getElementsByClassName('tablink');
 let tabcontent = document.getElementsByClassName("tabcontent");
-let oracleButton = document.getElementById('oracle-button')
+// let oracleButton = document.getElementById('oracle-button')
 let oracleContent = document.getElementById('oracle');
-let sceneButton = document.getElementById('scene-button')
+// let sceneButton = document.getElementById('scene-button')
 let sceneContent = document.getElementById('scene');
-let listButton = document.getElementById('list-button')
+// let listButton = document.getElementById('list-button')
 let listsContent = document.getElementById('list')
+
+// set initial display 
+sceneContent.style.display = "none"
+listsContent.style.display = "none"
 
 //Open tab - close other tab and remove active class. add active class to new tab
 function openTab(evt, tabName) {
@@ -43,7 +40,6 @@ function openTab(evt, tabName) {
 }
 
 // Chaos Number 
-let chaosNumber = parseInt(document.getElementById("chaos-number").textContent) - 1;
 let chaosNumberDisplay = parseInt(document.getElementById("chaos-number").textContent);
 let chaosPrev = document.getElementById('chaos-prev');
 let chaosNext = document.getElementById('chaos-next');
@@ -94,6 +90,7 @@ let questionButton = document.getElementById('question-btn');
 let oddsBox = document.getElementById('odds-modal')
 let oddsButton = document.getElementById('set-odds-button')
 let oddsValue = document.getElementsByClassName("odds-value");
+let chaosNumber = parseInt(document.getElementById("chaos-number").textContent) - 1; 
 
 
 // display the odds selector modal
@@ -101,7 +98,7 @@ questionButton.onclick = function() {
   oddsBox.style.display = "flex";
 }
 
-// close it
+// close odds selector value 
 window.onclick = function(event) {
   if (event.target == oddsBox) {
     oddsBox.style.display = "none";
@@ -109,7 +106,6 @@ window.onclick = function(event) {
 }
 
 //text slider for odds div
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -131,7 +127,6 @@ function showSlides(n) {
 }
 
 //fate chart functions
-
 let oddIs;
 
 //this funciton gets the inner html string of the text slider on the odds modal window

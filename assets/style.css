@@ -95,6 +95,15 @@ body {
   cursor: pointer;
 }
 
+/* scrollbar for modal*/
+.how-to-content::-webkit-scrollbar-track {
+  background: none;
+}
+
+.how-to-content::-webkit-scrollbar-thumb {
+  background: black;
+}
+
 /*tabs*/
 #tab-container {
   width: 80%;
@@ -456,6 +465,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: whitesmoke;
+  border-radius: 2em;
 }
 
 .header {
