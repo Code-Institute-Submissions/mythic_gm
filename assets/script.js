@@ -82,12 +82,22 @@ sceneGenerateButton.onclick = function() {
     displayBox.innerHTML = "<h3 class='word'>No change</h3>";
   } else if(randomInt % 2 == 0){
     let randomIntFocus= (Math.floor(Math.random() * 11));
+    console.log(randomIntFocus)
     let eventFocusValue = eventFocus[randomIntFocus];
-    displayBox.innerHTML = `<h3 class='word'>Scene interrupted</h3><h3 class='word'>${eventFocusValue}</h3>`
+    let npcFocus = npcArray[Math.floor(Math.random() * npcArray.length)]
+    let threadFocus = threadArray[Math.floor(Math.random() * threadArray.length)]
+    if(randomIntFocus < 5 || npcArray.length === 0){
+      displayBox.innerHTML = `<h3 class='word'>Scene interrupted</h3><h3 class='word'>${eventFocusValue}</h3>`
+    }else if (randomIntFocus < 8){
+      displayBox.innerHTML = `<h3 class='word'>Scene interrupted</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${npcFocus}</h3>`
+    } else {
+      displayBox.innerHTML = `<h3 class='word'>Scene interrupted</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${threadFocus}</h3>`
+    }
   } else {
-    displayBox.innerHTML = "<h3 class='word'>Scene Altered</h3>";
+      displayBox.innerHTML = "<h3 class='word'>Scene Altered</h3>";
   }
 }
+
 
 // question fate button
 // variables
@@ -219,9 +229,10 @@ function generateAnswer(){
     }
   }
 
-  const eventFocus = ['Remote event','NPC action','Introduce a new NPC','Move toward a thread','Move away from a thread',
-    'Close a thread','PC negative','PC positive','Ambiguous event','NPC negative','NPC positive']
+  const eventFocus = ['Remote event','Introduce a new NPC','PC negative','PC positive','Ambiguous event','NPC negative','NPC positive', 'NPC action', 
+  'Move toward a thread','Move away from a thread','Close a thread']
 
+  
 // to display the output text in emulator window
 oddsButton.onclick = function() {
   generatOddsValue()
@@ -325,8 +336,11 @@ for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
+    
   }
 }
+
+let npcArray = []
 
 // add to the character list
 let charAddBtn = document.getElementById("character-btn")
@@ -336,6 +350,8 @@ charAddBtn.onclick = function() {
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue.match(/[0-9a-zA-z]/g)) {
+    npcArray.push(inputValue);
+    console.log(npcArray)
     document.getElementById("char-ul").appendChild(li);
   } else {
     alert("You must write something!");
@@ -351,10 +367,17 @@ charAddBtn.onclick = function() {
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
+      var value = this.parentElement.firstChild.textContent;
+      var index = npcArray.indexOf(value)
+      npcArray.splice(index, 1)
+      console.log(npcArray)
+
       div.style.display = "none";
     }
   }
 }
+
+let threadArray = []
 
 // add to the thread list 
 let threadAddBtn = document.getElementById("thread-btn")
@@ -364,6 +387,8 @@ threadAddBtn.onclick = function() {
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue.match(/[0-9a-zA-z]/g)) {
+    threadArray.push(inputValue);
+    console.log(threadArray)
     document.getElementById("thread-ul").appendChild(li);
   } else {
     alert("You must write something!");
@@ -379,6 +404,9 @@ threadAddBtn.onclick = function() {
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
+      var value = this.parentElement.firstChild.textContent;
+      var index = threadArray.indexOf(value)
+      threadArray.splice(index, 1)
       div.style.display = "none";
     }
   }
