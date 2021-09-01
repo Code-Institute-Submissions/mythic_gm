@@ -379,6 +379,7 @@ body {
   flex-wrap: wrap;
   overflow-y: scroll;
   padding: 2.5% 0 2.5% 9%;
+  box-sizing: border-box;
 }
 
 .scene-box {

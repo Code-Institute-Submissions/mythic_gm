@@ -12,61 +12,34 @@ closeHowTo.onclick = function() {
   HowToModal.style.display = "none"
 }
 
-window.onclick = function(event) {
-  if (event.target == HowToModal) {
-    HowToModal.style.display = "none";
-  }
-}
+// window.onclick = function(event) {
+//   if (event.target == HowToModal) {
+//     HowToModal.style.display = "none";
+//   }
+// }
 
 // Tabs
 // declare variables - tab buttons and content of the tabs
 let activeTab;
-let tablinks = document.getElementsByClassName('tabcontent');
+let tablinks = document.getElementsByClassName('tablink');
+let tabcontent = document.getElementsByClassName("tabcontent");
 let oracleButton = document.getElementById('oracle-button')
 let oracleContent = document.getElementById('oracle');
 let sceneButton = document.getElementById('scene-button')
 let sceneContent = document.getElementById('scene');
 let listButton = document.getElementById('list-button')
 let listsContent = document.getElementById('list')
-oracleButton.classList.add("active")
 
-//set initial view - oracle tab open and the other tabs closed
-listsContent.style.display = "none";
-sceneContent.style.display = "none";
-
-//close tabs
-function closeTabs() {
-  for(let i = 0; i < tablinks.length; i++){
-    tablinks[i].style.display = "none";
+//Open tab - close other tab and remove active class. add active class to new tab
+function openTab(evt, tabName) {
+  for(let i = 0; i < tabcontent.length; i++){
+    tabcontent[i].style.display = "none";
   }
-}
-
-//open and close tabs
-oracleButton.onclick = function() { 
-  closeTabs();
-  oracleContent.style.display = "flex";
-  sceneButton.classList.remove("active");
-  listButton.classList.remove("active");
-  oracleButton.classList.add("active");
-  displayBox.innerHTML = ""
-}
-
-sceneButton.onclick = function() { 
-  closeTabs();
-  sceneContent.style.display = "flex";
-  listButton.classList.remove("active");
-  oracleButton.classList.remove("active");
-  sceneButton.classList.add("active");
-  displayBox.innerHTML = ""
-}
-
-listButton.onclick = function() { 
-  closeTabs();
-  listsContent.style.display = "flex";
-  oracleButton.classList.remove("active");
-  sceneButton.classList.remove("active");
-  listButton.classList.add("active");
-  displayBox.innerHTML = ""
+  for (i = 0; i < tablinks.length; i++) {
+  tablinks[i].className = tablinks[i].className.replace("active", ""); //remove active class 
+  } 
+  document.getElementById(tabName).style.display = "block";//open tab with active class name
+  evt.currentTarget.className += " active";
 }
 
 // Chaos Number 
