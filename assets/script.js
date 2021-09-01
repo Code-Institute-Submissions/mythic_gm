@@ -19,12 +19,12 @@ let tabcontent = document.getElementsByClassName("tabcontent");
 // let oracleButton = document.getElementById('oracle-button')
 let oracleContent = document.getElementById('oracle');
 // let sceneButton = document.getElementById('scene-button')
-let sceneContent = document.getElementById('scene');
+let journalContent = document.getElementById('journal');
 // let listButton = document.getElementById('list-button')
 let listsContent = document.getElementById('list')
 
 // set initial display 
-sceneContent.style.display = "none"
+journalContent.style.display = "none"
 listsContent.style.display = "none"
 
 // closing display when another button is clicked
