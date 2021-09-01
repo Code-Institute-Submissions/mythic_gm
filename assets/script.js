@@ -66,11 +66,16 @@ chaosNext.onclick = function() {
   }
 }
 
+// closing display when another button is clicked
+function cancel(){
+  displayBox.innerHTML = "";
+}
 
 // scene button 
 let sceneGenerateButton = document.getElementById("scene-btn");
 
 sceneGenerateButton.onclick = function() {
+  cancel()
   let randomInt = Math.floor(Math.random() * 10);
   if (randomInt > chaosNumberDisplay){
     displayBox.innerHTML = "<h3 class='word'>No change</h3>";
@@ -95,6 +100,7 @@ let chaosNumber = parseInt(document.getElementById("chaos-number").textContent) 
 
 // display the odds selector modal
 questionButton.onclick = function() {
+  cancel()
   oddsBox.style.display = "flex";
 }
 
@@ -255,6 +261,7 @@ const eventSubject = ["Goals", "Dreams", "Environment", "Outside", "Inside","Rea
   // this funciton will take a random word from eventMeaning and EventSubject array, and display them on the display box when
   // event button is clicked
 eventButton.onclick = function(){
+  cancel()
   var randomIntAction = (Math.floor(Math.random() * 100 +1 ));
   var action = eventAction[randomIntAction];
   var randomIntSubject = (Math.floor(Math.random() * 100 +1 ));
