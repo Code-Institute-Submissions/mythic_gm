@@ -56,8 +56,8 @@ chaosPrev.onclick = function() {
   document.getElementById("chaos-number").innerHTML = `${chaosNumberDisplay}`
   }
   if(chaosNumberDisplay < 9){
-    document.getElementById("chaos-number").style.color = "whitesmoke";
-    document.getElementById("chaos-txt").style.color = "whitesmoke";
+    document.getElementById("chaos-number").classList.remove("chaos-red");
+    document.getElementById("chaos-txt").classList.remove("chaos-red");
   }
 }
 
@@ -67,8 +67,8 @@ chaosNext.onclick = function() {
   document.getElementById("chaos-number").innerHTML = `${chaosNumberDisplay}`
   }
   if(chaosNumberDisplay == 9){
-    document.getElementById("chaos-number").style.color = "#bb0a1e";
-    document.getElementById("chaos-txt").style.color = "#bb0a1e";
+    document.getElementById("chaos-number").classList.add("chaos-red")
+    document.getElementById("chaos-txt").classList.add("chaos-red");
   }
 }
 
@@ -137,7 +137,6 @@ let oddIs;
 
 //this funciton gets the inner html string of the text slider on the odds modal window
 function getOddsValue(n) {
-  var i;
   var slides = document.getElementsByClassName("odds-slider");
   let oddsValues = document.getElementsByClassName("odds-value");
   if (n > slides.length) {slideIndex = 1}

@@ -192,6 +192,19 @@ body {
   color: rgba(184, 180, 180, 0.55);
 }
 
+.chaos-red {
+  animation: color 3s infinite linear;
+}
+
+@keyframes color {
+  50% {
+    color: #bb0a1e;
+  }
+  0% {
+    color: whitesmoke;
+  }
+}
+
 /*text reveal box*/
 
 #text-window {
@@ -544,7 +557,6 @@ ul li {
 
 #footer i:hover {
   font-size: 2.2em;
-  animation: color 2s infinite linear;
 }
 
 #footer a {
