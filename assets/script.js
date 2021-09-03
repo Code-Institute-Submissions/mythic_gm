@@ -81,18 +81,7 @@ sceneGenerateButton.onclick = function() {
   if (randomInt > chaosNumberDisplay){
     displayBox.innerHTML = "<h3 class='word'>No change</h3>";
   } else if(randomInt % 2 == 0){
-    let randomIntFocus= (Math.floor(Math.random() * 11));
-    console.log(randomIntFocus)
-    let eventFocusValue = eventFocus[randomIntFocus];
-    let npcFocus = npcArray[Math.floor(Math.random() * npcArray.length)]
-    let threadFocus = threadArray[Math.floor(Math.random() * threadArray.length)]
-    if(randomIntFocus < 5 || npcArray.length === 0){
-      displayBox.innerHTML = `<h3 class='word'>Scene interrupted</h3><h3 class='word'>${eventFocusValue}</h3>`
-    }else if (randomIntFocus < 8){
-      displayBox.innerHTML = `<h3 class='word'>Scene interrupted</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${npcFocus}</h3>`
-    } else {
-      displayBox.innerHTML = `<h3 class='word'>Scene interrupted</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${threadFocus}</h3>`
-    }
+    displayBox.innerHTML = "<h3 class='word'>Scene interrupted</h3>";
   } else {
       displayBox.innerHTML = "<h3 class='word'>Scene Altered</h3>";
   }
@@ -194,7 +183,7 @@ function generatOddsValue() {
 // for the purpose of validating if outcome is correct - the random number is printed to console.
 function generateAnswer(){
   
-  let randomInt = (Math.floor(Math.random() * 100 +1 ));
+  randomInt = (Math.floor(Math.random() * 100 +1 ));
   console.log(randomInt)
   if(randomInt % 11 == 0 && (randomInt / 11) < (chaosNumber +1)){
     console.log('true')
@@ -219,13 +208,13 @@ function generateAnswer(){
     let randomInt = (Math.floor(Math.random() * 100 +1 ));
     console.log(randomInt)
     if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
-      displayBox.innerHTML = `<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`;
+      displayBox.innerHTML = `<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3>`;
     } else if (randomInt <= (oddIs[chaosNumber])) {
-      displayBox.innerHTML = `<h3 class='word'>Yes</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
+      displayBox.innerHTML = `<h3 class='word'>Yes</h3><h3 class='word'>Random Event</h3>`
     } else if (randomInt > (oddIs[chaosNumber]) && randomInt >= (oddIs[chaosNumber] / 5 + 81)){
-      displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
+      displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3>`
     } else {
-      displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
+      displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Random Event</h3>`
     }
   }
 
@@ -278,7 +267,18 @@ eventButton.onclick = function(){
   var action = eventAction[randomIntAction];
   var randomIntSubject = (Math.floor(Math.random() * 100 +1 ));
   var subject = eventSubject[randomIntSubject];
-  displayBox.innerHTML = `<h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`;
+  let randomIntFocus= (Math.floor(Math.random() * 11));
+  console.log(randomIntFocus)
+  let eventFocusValue = eventFocus[randomIntFocus];
+  let npcFocus = npcArray[Math.floor(Math.random() * npcArray.length)]
+  let threadFocus = threadArray[Math.floor(Math.random() * threadArray.length)]
+  if(randomIntFocus < 5 || npcArray.length === 0 || threadArray.length === 0){
+      displayBox.innerHTML = `<h3 class='word'>${eventFocusValue}</h3><h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`
+  }else if (randomIntFocus < 8){
+      displayBox.innerHTML = `<h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${npcFocus}</h3><h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`
+  } else {
+      displayBox.innerHTML = `<h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${threadFocus}</h3><h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`
+  }
 }
 
 //scene tab script 
