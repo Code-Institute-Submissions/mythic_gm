@@ -68,7 +68,7 @@ body {
   overflow-y: scroll;
 }
 
-.how-to-content p, h3 {
+.how-to-content p, h3, h4 {
   text-align: center;
   letter-spacing: 1px;
 }
@@ -160,7 +160,7 @@ iframe {
   width: 80vw;
 }
 
-.tabcontent h1, h2, h3, button {
+.tabcontent h1, h2, h3, h4, button {
   font-family: 'Cinzel Decorative', cursive;
 }
 
