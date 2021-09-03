@@ -81,10 +81,22 @@ let sceneGenerateButton = document.getElementById("scene-btn");
 sceneGenerateButton.onclick = function() {
   cancel()
   let randomInt = Math.floor(Math.random() * 10);
+  
   if (randomInt > chaosNumberDisplay){
     displayBox.innerHTML = "<h3 class='word'>No change</h3>";
   } else if(randomInt % 2 == 0){
-    displayBox.innerHTML = "<h3 class='word'>Scene interrupted</h3>";
+    let randomIntFocus= (Math.floor(Math.random() * 11));
+    console.log(randomIntFocus)
+    let eventFocusValue = eventFocus[randomIntFocus];
+    let npcFocus = npcArray[Math.floor(Math.random() * npcArray.length)]
+    let threadFocus = threadArray[Math.floor(Math.random() * threadArray.length)]
+    if(randomIntFocus < 5 || npcArray.length === 0 || threadArray.length === 0) {
+      displayBox.innerHTML = `<h3 class='word'>Scene interrupted</h3><h3 class='word'>${eventFocusValue}</h3>`;
+    } else if (randomIntFocus < 8){
+      displayBox.innerHTML = `<h3 class='word'>Scene interrupted</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${npcFocus}</h3>`
+    } else {
+      displayBox.innerHTML = `<h3 class='word'>Scene interrupted</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${threadFocus}</h3>`
+    }
   } else {
       displayBox.innerHTML = "<h3 class='word'>Scene Altered</h3>";
   }
@@ -203,22 +215,46 @@ function generateAnswer(){
   }
 }
 
-  function randomEventAnswer() {
-    let randomIntFocus= (Math.floor(Math.random() * 11));
-    console.log(randomIntFocus)
-    let eventFocusValue = eventFocus[randomIntFocus];
-    let randomInt = (Math.floor(Math.random() * 100 +1 ));
-    console.log(randomInt)
+function randomEventAnswer() {
+  let randomIntFocus= (Math.floor(Math.random() * 11));
+  console.log(randomIntFocus)
+  let eventFocusValue = eventFocus[randomIntFocus];
+  let npcFocus = npcArray[Math.floor(Math.random() * npcArray.length)]
+  let threadFocus = threadArray[Math.floor(Math.random() * threadArray.length)]
+  let randomInt = (Math.floor(Math.random() * 100 +1 ));
+  console.log(randomInt)
+  if(randomIntFocus < 5 || npcArray.length === 0 || threadArray.length === 0) {
     if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
-      displayBox.innerHTML = `<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3>`;
-    } else if (randomInt <= (oddIs[chaosNumber])) {
-      displayBox.innerHTML = `<h3 class='word'>Yes</h3><h3 class='word'>Random Event</h3>`
-    } else if (randomInt > (oddIs[chaosNumber]) && randomInt >= (oddIs[chaosNumber] / 5 + 81)){
-      displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3>`
-    } else {
-      displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Random Event</h3>`
+      displayBox.innerHTML = `<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`;
+    }else if (randomInt <= (oddIs[chaosNumber])) {
+      displayBox.innerHTML = `<h3 class='word'>Yes</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
+    }else if (randomInt > (oddIs[chaosNumber]) && randomInt >= (oddIs[chaosNumber] / 5 + 81)){
+    displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
+    }else {
+    displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`
+    }
+  }else if (randomIntFocus < 8) {
+    if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
+      displayBox.innerHTML = `<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${npcFocus}</h3>`;
+    }else if (randomInt <= (oddIs[chaosNumber])) {
+      displayBox.innerHTML = `<h3 class='word'>Yes</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${npcFocus}</h3>`
+    }else if (randomInt > (oddIs[chaosNumber]) && randomInt >= (oddIs[chaosNumber] / 5 + 81)){
+    displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${npcFocus}</h3>`
+    }else {
+    displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${npcFocus}</h3>`
+    }
+  }else {
+    if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
+      displayBox.innerHTML = `<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${threadFocus}</h3>`;
+    }else if (randomInt <= (oddIs[chaosNumber])) {
+      displayBox.innerHTML = `<h3 class='word'>Yes</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${threadFocus}</h3>`
+    }else if (randomInt > (oddIs[chaosNumber]) && randomInt >= (oddIs[chaosNumber] / 5 + 81)){
+    displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${threadFocus}</h3>`
+    }else {
+    displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${threadFocus}</h3>`
     }
   }
+}
 
   const eventFocus = ['Remote event','Introduce a new NPC','PC negative','PC positive','Ambiguous event','NPC negative','NPC positive', 'NPC action', 
   'Move toward a thread','Move away from a thread','Close a thread']
@@ -269,18 +305,7 @@ eventButton.onclick = function(){
   var action = eventAction[randomIntAction];
   var randomIntSubject = (Math.floor(Math.random() * 100 +1 ));
   var subject = eventSubject[randomIntSubject];
-  let randomIntFocus= (Math.floor(Math.random() * 11));
-  console.log(randomIntFocus)
-  let eventFocusValue = eventFocus[randomIntFocus];
-  let npcFocus = npcArray[Math.floor(Math.random() * npcArray.length)]
-  let threadFocus = threadArray[Math.floor(Math.random() * threadArray.length)]
-  if(randomIntFocus < 5 || npcArray.length === 0 || threadArray.length === 0){
-      displayBox.innerHTML = `<h3 class='word'>${eventFocusValue}</h3><h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`
-  }else if (randomIntFocus < 8){
-      displayBox.innerHTML = `<h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${npcFocus}</h3><h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`
-  } else {
-      displayBox.innerHTML = `<h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${threadFocus}</h3><h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`
-  }
+  displayBox.innerHTML = `><h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`
 }
 
 //scene tab script 
