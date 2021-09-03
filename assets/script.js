@@ -3,13 +3,16 @@ let howToModal = document.getElementById('how-to-modal');
 let howToBtn = document.getElementById('how-to-btn');
 let closeHowTo = document.getElementById('close-how-to');
 
+
 //open and close how to modal
 howToBtn.onclick = function() {
   howToModal.style.display = "initial";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)"
 }
 
 closeHowTo.onclick = function() {
   howToModal.style.display = "none"
+  document.body.style.backgroundColor = "initial"
 }
 
 // Tabs
