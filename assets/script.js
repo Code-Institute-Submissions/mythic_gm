@@ -83,7 +83,7 @@ sceneGenerateButton.onclick = function() {
   let randomInt = Math.floor(Math.random() * 10);
   
   if (randomInt > chaosNumberDisplay){
-    displayBox.innerHTML = "<h3 class='word'>No change</h3>";
+    displayBox.innerHTML = "<h3 class='word'>unmodified</h3>";
   } else if(randomInt % 2 == 0){
     let randomIntFocus= (Math.floor(Math.random() * 11));
     console.log(randomIntFocus)
