@@ -305,7 +305,7 @@ eventButton.onclick = function(){
   var action = eventAction[randomIntAction];
   var randomIntSubject = (Math.floor(Math.random() * 100 +1 ));
   var subject = eventSubject[randomIntSubject];
-  displayBox.innerHTML = `><h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`
+  displayBox.innerHTML = `<h3 class = 'word'>${action}</h3><h3 class = 'word'>${subject}</h3>`
 }
 
 //scene tab script 
