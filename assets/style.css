@@ -105,7 +105,6 @@ body {
 iframe {
   display: block;
   margin: 0 auto;
-  width: 80%;
 }
 
 /*tabs - container to hold .tab at the end and then the individual tab buttons*/
@@ -589,6 +588,9 @@ ul li {
   }
   .scene-box textarea {
     font-size: .8em;
+  }
+  iframe {
+    width: 80%;
   }
 }
 
