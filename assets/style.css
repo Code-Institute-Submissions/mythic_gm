@@ -182,7 +182,6 @@ iframe {
   color: whitesmoke;
 }
 
-
 #chaos-next, #chaos-prev { /*next and previous buttons for chaos number*/
   cursor: pointer;
   position: relative;
@@ -386,7 +385,6 @@ iframe {
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4); 
 }
-
 
 .modal-content {
   background-color: #fefefe;
@@ -614,8 +612,8 @@ ul li {
   ul li {
     font-size: 1.2em;
   }
- 
 }
+
 @media screen and (max-width: 500px) {
   #chaos, .fate-qs {
     font-size: 0.9em;
@@ -656,7 +654,6 @@ ul li {
 }
 
 @media screen and (max-width: 400px){
-
   .word {
     font-size: 1.6em;
   }
@@ -681,19 +678,24 @@ ul li {
   .odds-value {
     font-size: 0.7em;
   }
+
   #chaos-prev, #chaos-next {
     bottom: 20px;
     font-size: 8px;
   }
+
   #emulator {
     height: 100vh;
   }
+
   #logo {
     font-size: 1.8em;
   }
+
   #how-to-btn {
     font-size: 1.1em;
   }
+
   #sound {
   font-size: 2.5em;
 }
@@ -733,23 +735,29 @@ ul li {
   #emulator {
     height: 100vh;
   }
+
   #logo {
     font-size: 1.8em;
   }
+
   #how-to-btn {
     font-size: 1.1em;
   }
+
   #sound {
   font-size: 2.5em;
 }
 }
+
 @media screen and (max-height: 400px) {
   .word {
     font-size: 1.5em;
   }
+
   .bottom-row {
     bottom: 50px;
   }
+
   #chaos, .fate-qs {
     font-size: 0.68em;
     height: 10px;
@@ -757,5 +765,4 @@ ul li {
   #emulator {
     height: 150vh;
   }
-  
 }
