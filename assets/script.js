@@ -61,7 +61,6 @@ closeHowTo.onclick = function() {
 // each tab uses the same black window to display text in the 'display box'.
 let tablinks = document.getElementsByClassName('tablink');
 let tabcontent = document.getElementsByClassName("tabcontent");
-let oracleContent = document.getElementById('oracle');
 let journalContent = document.getElementById('journal');
 let listsContent = document.getElementById('list');
 let displayBox = document.getElementById('text-display');
@@ -77,9 +76,9 @@ function cancel(){
 
 //Open tab - close other tab and remove active class. add active class to new tab
 function openTab(evt, tabName) {
-  cancel();
+  cancel(); //close previous tab
   for(let i = 0; i < tabcontent.length; i++){
-    tabcontent[i].style.display = "none";
+    tabcontent[i].style.display = "none"; // close all tabs display
   }
   for (i = 0; i < tablinks.length; i++) {
   tablinks[i].className = tablinks[i].className.replace("active", ""); //remove active class 
@@ -156,13 +155,12 @@ sceneGenerateButton.onclick = function() {
 let questionButton = document.getElementById('question-btn');
 let oddsBox = document.getElementById('odds-modal');
 let oddsButton = document.getElementById('set-odds-button');
-let oddsValue = document.getElementsByClassName("odds-value");
 let chaosNumber = parseInt(document.getElementById("chaos-number").textContent) - 1; 
 
 
 // display the odds selector modal
 questionButton.onclick = function() {
-  cancel();
+  cancel(); //close previous display if any 
   oddsBox.style.display = "flex";
 };
 
