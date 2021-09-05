@@ -1,8 +1,8 @@
 // Constants 
 
-// The event focus is displayed when a random event occurs or a scene starts and is interrupted somehow.
-//there is an npc array and a thread array that may or may not be empty depending on user input
-// event focus [5-7] are linked with npc array. event focus [8-10] are linked with the thread array.
+/* The event focus is displayed when a random event occurs or a scene starts and is interrupted somehow.
+there is an npc array and a thread array that may or may not be empty depending on user input
+event focus [5-7] are linked with npc array. event focus [8-10] are linked with the thread array.*/
 
 const eventFocus = ['Remote event','Introduce a new NPC','PC negative','PC positive','Ambiguous event','NPC negative','NPC positive', 'NPC action', 
   'Move toward a thread','Move away from a thread','Close a thread'];
@@ -88,9 +88,9 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
-// Chaos Number 
-// the chaos number can go from 1 to 9. a higher chaos number influences answers to yes/no questions and to the 
-//likelyhood of random events occuring. At level 9 there is an animation to highlight the danger of the chaos being this high.
+/*Chaos Number 
+the chaos number can go from 1 to 9. a higher chaos number influences answers to yes/no questions and to the 
+likelyhood of random events occuring. At level 9 there is an animation to highlight the danger of the chaos being this high.*/
 let chaosNumberDisplay = parseInt(document.getElementById("chaos-number").textContent);
 let chaosPrev = document.getElementById('chaos-prev');
 let chaosNext = document.getElementById('chaos-next');
@@ -119,10 +119,10 @@ chaosNext.onclick = function() {
   }
 };
 
-// scene button 
-// the scene button is used at the start of a scene to see if anything is altered or interrupted.
-// it will generate a number and compare against the chaos number. below is fine. above will change the
-// scene depending on the number being odd or even. odd is altered. even is interrupted and will include a variable from the eventFocus array.
+/*scene button 
+ the scene button is used at the start of a scene to see if anything is altered or interrupted.
+it will generate a number and compare against the chaos number. below is fine. above will change the
+scene depending on the number being odd or even. odd is altered. even is interrupted and will include a variable from the eventFocus array.*/
 let sceneGenerateButton = document.getElementById("scene-btn");
 
 sceneGenerateButton.onclick = function() {
@@ -198,9 +198,9 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
-//fate chart functions
+/*fate chart functions
 // the fate chart is a reference from the source material book. Information about it can be found in the readme file. 
-// it essentially compares a dice roll with an odds table and the chaos number to see the outcome of a yes/no question.
+it essentially compares a dice roll with an odds table and the chaos number to see the outcome of a yes/no question.*/
 
 //this funciton gets the inner html of the text slider on the odds modal window as a string to be used in the next funciton.
 function getOddsValue(n) {
@@ -218,8 +218,8 @@ function getOddsValue(n) {
   return(oddsValues[n-1].innerHTML);
 }
 
-//this funciton links an array of numbers that represent the odds of the outcome coming out as a yes with the string taken from previous function.
-// each array has nine numbers that are connected with the current chaos number.
+/*this funciton links an array of numbers that represent the odds of the outcome coming out as a yes with the string taken from previous function.
+each array has nine numbers that are connected with the current chaos number.*/
 let oddIs;
 function generatOddsValue() {
   if (getOddsValue(slideIndex) === "50/50"){
@@ -246,15 +246,15 @@ function generatOddsValue() {
 
 }
 
-// this function imitates the dice roll and generates the answer to the question. 
-// yes is below and up to the number and no is after the number. 
-//the lower 1/5 of the number is exceptional yes, the upper 1/5 of the number is exceptional no
-//you can get the lower 1/5 by dividing by 5. the upper 1/5th by dividing by 5 and adding 81 to the answer.
-// (first 4/5 of 100 = 0 - 80 & last 1/5th is 81-100)
-// The higher the chaos number the higher the likelyhood of a yes answer
-// for the purpose of validating if outcome is correct - the random number is printed to console.
-// if the number is divisible by 11 then a a different funciton will be called. this funciton will give the answer and also generate
-// a random event with a focus. 
+/*This function imitates the dice roll and generates the answer to the question. 
+yes is below and up to the number and no is after the number. 
+the lower 1/5 of the number is exceptional yes, the upper 1/5 of the number is exceptional no
+you can get the lower 1/5 by dividing by 5. the upper 1/5th by dividing by 5 and adding 81 to the answer.
+(first 4/5 of 100 = 0 - 80 & last 1/5th is 81-100)
+The higher the chaos number the higher the likelyhood of a yes answer
+for the purpose of validating if outcome is correct - the random number is printed to console.
+if the number is divisible by 11 then a a different funciton will be called. this funciton will give the answer and also generate
+a random event with a focus. */
 
 function generateAnswer(){
   randomInt = (Math.floor(Math.random() * 100 +1 ));
@@ -275,8 +275,8 @@ function generateAnswer(){
   }
 }
 
-// this funciton is quite verbose as it needs to account for what value is selected from the eventFocus array.
-// It has to account for having an additional npc focus or an additional thread focus or having no additional focus beyond the eventFocus array.
+/*this funciton is quite verbose as it needs to account for what value is selected from the eventFocus array.
+It has to account for having an additional npc focus or an additional thread focus or having no additional focus beyond the eventFocus array.*/
 
 function randomEventAnswer() {
   let randomIntFocus= (Math.floor(Math.random() * 11));
@@ -336,8 +336,8 @@ let eventButton = document.getElementById('event-btn');
 
 //event meaning: Action array
 
-  // this funciton will take a random word from eventMeaning and EventSubject array, and display them on the display box when
-  // event button is clicked
+  /*this funciton will take a random word from eventMeaning and EventSubject array, and display them on the display box when
+  event button is clicked*/
 eventButton.onclick = function(){
   cancel();
   var randomIntAction = (Math.floor(Math.random() * 100 +1 ));
