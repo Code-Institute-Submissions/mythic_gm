@@ -25,7 +25,7 @@
       <div id="how-to-modal" class="modal">
         <!--Content of modal-->
         <div class="how-to-content">
-          <button id="close-how-to"><i class="far fa-times-circle"></i></button>
+          <button aria-label="close" id="close-how-to"><i class="far fa-times-circle"></i></button>
           <h3> Table of Contents</h3>
           <br>
           <p><a href="#ttrpg">Role-Playing games</a></p>
@@ -45,8 +45,10 @@
           <h3 id="ttrpg">What is a roleplaying game?</h3>
           <br>
           <p>
-            Tabletop Role-playing games (ttrpg) such as Dungeons & Dragons and Call
-             of Cthulhu are pen & paper, collaborative storytelling games. They use dice to determine results.
+            Tabletop Role-playing games (ttrpg) such as 
+            <a href="https://dnd.wizards.com/" target="_blank" aria-label="learn more about dungeons and dragons here (opens in a new tab">Dungeons & Dragons</a> and 
+            <a href="https://www.chaosium.com/call-of-cthulhu-rpg/" target="_blank" aria-label="learn more about Call of Cthulu here (opens in a new tab">Call of Cthulu</a>
+            are pen & paper, collaborative storytelling games. They use dice to determine results.
           </p>
           <br>
           <p>
@@ -80,7 +82,7 @@
           <p>
             Mythic is a tool for use with your table-top RPG sessions. It is a simple GM emulator. You can ask Mythic yes/no questions and generate random events that focus 
             on relevant NPC and story threads in your adventure. It is a digital implementation of 
-            the <a href="https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator" target="_blank">Mythic Game Master Emulator</a> book.  
+            the <a href="https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator" target="_blank" aria-label="purchase the source book here (opens in a new tab)">Mythic Game Master Emulator</a> book.  
           </p>
           <br>
           <p>
@@ -118,7 +120,7 @@
           <br>
           <p>
             Go to the "lists" tab and add any characters or threads relevant to your adventure. If you have no ideas, you can generate an event in the oracle tab or go
-             <a href="https://donjon.bin.sh/" target="_blank">to this website</a>  A thread is just a plot point the characters are moving towards. There is no minimum or 
+             <a href="https://donjon.bin.sh/" target="_blank" aria-label="donjon is a website full of random table generators for your ttrpg games (opens in a new tab)">to this website</a>  A thread is just a plot point the characters are moving towards. There is no minimum or 
              maximum amount of characters or threads in a session.
           </p>
           <br>
@@ -306,8 +308,8 @@
         <div id="chaos">
           <h2 id="chaos-txt">Chaos</h2>
           <h3 id="chaos-number">5</h3>
-          <button id="chaos-prev">&#10094;</button>
-              <button id="chaos-next">&#10095;</button>
+          <button aria-label="previous" id="chaos-prev">&#10094;</button>
+              <button aria-label="next" id="chaos-next">&#10095;</button>
         </div>
         <div id="text-window">
           <!--This modal is for setting the odds and is initially not displayed-->
@@ -345,11 +347,11 @@
               <div class="odds-value">Unlikely</div>
             </div>
              <!-- Next and previous buttons  -->
-            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+            <button aria-label="previous odds value" class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button aria-label="next odds value" class="next" onclick="plusSlides(1)">&#10095;</button>
           </div>
           <!--modal close/submit button-->
-          <div id="set-odds"><button id="set-odds-button"><i class="fas fa-check-circle"></i></button></div>
+          <div id="set-odds"><button aria-label="submit odds selection" id="set-odds-button"><i class="fas fa-check-circle"></i></button></div>
           </div>
           <div class="buffer"></div> 
           <div id="text-display">        
@@ -392,14 +394,14 @@
           <div id="characters" ><!--characters lists-->
             <h2 class="header">characters & groups</h2>
             <input id="char-input" type="text" placeholder="Add character...">
-            <button id="character-btn" class="addBtn"><i class="fas fa-plus-circle"></i></button>
+            <button aria-label="add character or group" id="character-btn" class="addBtn"><i class="fas fa-plus-circle"></i></button>
             <ul id="char-ul">
             </ul>
           </div>
           <div id="threads"><!--threads lists-->
             <h2 class="header">Threads</h2>
             <input id="thread-input" type="text" placeholder="Add thread.." required>
-            <button id="thread-btn" class="addBtn"><i class="fas fa-plus-circle"></i></button>
+            <button aria-label="add thread" id="thread-btn" class="addBtn"><i class="fas fa-plus-circle"></i></button>
             <ul id="thread-ul">
             </ul>
           </div>
@@ -410,13 +412,13 @@
   <!--footer-->
   <footer>
     <div id="footer">
-      <a href="https://github.com/xiaoniuniu89" target="_blank">
+      <a href="https://github.com/xiaoniuniu89" target="_blank" aria-label="check out my other projects on github (opens in a new tab)">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://discord.com/channels/883249633474801674/883249633474801677" target="_blank">
+      <a href="https://discord.com/channels/883249633474801674/883249633474801677" target="_blank" aria-label="check out my discord channel (opens in a new tab)">
         <i class="fab fa-discord"></i>
       </a>
-      <a href="https://www.linkedin.com/in/daniel-callaghan-5ab143203/" target="_blank">
+      <a href="https://www.linkedin.com/in/daniel-callaghan-5ab143203/" target="_blank" aria-label="check out my facebook profile (opens in a new tab)">
         <i class="fab fa-linkedin"></i>
       </a>
     </div>
