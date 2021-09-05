@@ -101,6 +101,7 @@ body {
 iframe {
   display: block;
   margin: 0 auto;
+  width: 80%;
 }
 
 /*tabs*/
@@ -669,19 +670,23 @@ ul li {
     font-size: 0.68em;
   }
 
+  #event-btn, #scene-btn, #question-btn {
+    font-size: 1em;
+  }
+
+  #chaos-txt{
+    font-size: 1em;
+  }
   #how-to-btn {
     margin-top: 30px;
   }
 
-  #sound {
-    left: 40%;
-    margin-bottom: 20px;
-  }
   .odds-value {
     font-size: 0.7em;
   }
   #chaos-prev, #chaos-next {
     bottom: 20px;
+    font-size: 8px;
   }
   #emulator {
     height: 100vh;
@@ -695,15 +700,21 @@ ul li {
   #sound {
   font-size: 2.5em;
 }
-#characters {
-  height: 49vh;
+  #characters {
+    height: 49vh;
 }
-#threads {
-  height: 49vh;
+  #threads {
+    height: 49vh;
 }
-ul li {
-  font-size: 1em;
+  ul li {
+    font-size: 1em;
+  }
 }
+
+@media screen and (max-width: 280px) {
+  #chaos, .tab, .fate-qs {
+    font-size: 0.5em;
+  }
 }
 
 @media screen and (max-height: 660px) {
@@ -739,9 +750,15 @@ ul li {
   .word {
     font-size: 1.5em;
   }
+  .bottom-row {
+    bottom: 50px;
+  }
   #chaos, .fate-qs {
     font-size: 0.68em;
-    height: 30px;
+    height: 10px;
+  }
+  #emulator {
+    height: 150vh;
   }
   
 }
