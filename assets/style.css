@@ -30,6 +30,7 @@ body {
   justify-content: center;
 }
 
+/*how to button*/
 #how-to-btn {
   margin: 50px 0 ;
   background-color: rgba(41, 38, 38, 0.65);
@@ -43,9 +44,11 @@ body {
   cursor: pointer;
   font-family: 'Raleway', sans-serif;
 }
+
 #how-to-btn:hover {
   background-color: rgba(65, 62, 62, 0.65);
 }
+
 /*Modal Background*/
 .modal {
   display: none;
@@ -57,6 +60,7 @@ body {
   height: 100%;
 }
 
+/*modal content*/
 .how-to-content {
   margin: 0 auto; 
   padding: 20px;
@@ -104,7 +108,7 @@ iframe {
   width: 80%;
 }
 
-/*tabs*/
+/*tabs - container to hold .tab at the end and then the individual tab buttons*/
 #tab-container {
   width: 80%;
   margin: 0 10%;
@@ -142,14 +146,14 @@ iframe {
 }
 
 /*Emulator*/
-#emulator {
+#emulator { /*container*/
   width: 100%;
   height: 65vh;
   display: flex;
   justify-content: center;
 }
 
-#emulator-window {
+#emulator-window { /*the box that will hold all of the content*/
   width: 80%;
   height: 100%;
   background-color: black;
@@ -157,7 +161,7 @@ iframe {
   position: relative;
 }
 
-.tabcontent {
+.tabcontent { /*each tab will have its own displayed content*/
   width: 80vw;
 }
 
@@ -171,7 +175,7 @@ iframe {
 
 /*oracle tab content*/
 
-#chaos {
+#chaos { /*chaos number in top right*/
   width: 25%;
   text-align: center;
   position: absolute;
@@ -180,7 +184,7 @@ iframe {
 }
 
 
-#chaos-next, #chaos-prev {
+#chaos-next, #chaos-prev { /*next and previous buttons for chaos number*/
   cursor: pointer;
   position: relative;
   bottom: 30px;
@@ -198,7 +202,7 @@ iframe {
   color: rgba(184, 180, 180, 0.55);
 }
 
-.chaos-red {
+.chaos-red { /* animation that triggers when chaos number reaches lvl 9*/
   animation: color 3s infinite linear;
 }
 
@@ -213,16 +217,16 @@ iframe {
 
 /*text reveal box*/
 
-#text-window {
+#text-window { /*container for any text that will be displayed*/
   width: 100%;
   height: 300px;
 }
 
-.buffer {
+.buffer { /* help position any text away from the top of the window*/ 
   margin-bottom: 100px;
 }
 
-.word {
+.word { /* text that will be displayed as a result of the three buttons in the bottom row of the oracle tab*/
   text-align: center;
   font-size: 2em;
   font-family: 'Eater', cursive;
@@ -245,7 +249,7 @@ iframe {
   animation-duration: 6s;
 }
 
-@keyframes blur {
+@keyframes blur { /* display text in a blur in blur out animation*/
 	0%	{text-shadow:  0 0 90px #fff; opacity:0;}
 	5%	{text-shadow:  0 0 80px #fff;}
   10%	{text-shadow:  0 0 70px #fff;}
@@ -259,7 +263,7 @@ iframe {
 
 /*bottom row*/
 
-.bottom-row {
+.bottom-row { /*container for bottom row containing the three buttons in oracle tab*/
   display: flex;
   width: 100%;
   position: absolute;
@@ -273,7 +277,7 @@ iframe {
   justify-content: center;
 }
 
-#question-btn, #event-btn, #title, #scene-btn, #add-scene-btn {
+#question-btn, #event-btn, #title, #scene-btn, #add-scene-btn { /*buttons style*/
   background-color: rgba(184, 180, 180, 0.2);
   padding: 2px;
   border-radius: 1.1em;
@@ -291,7 +295,8 @@ iframe {
   background-color: rgba(184, 180, 180, 0.55);
 }
 
-#odds-container, #odds-header, #set-odds {
+/*setting odds to a question - it is contained in its own modal that expands when question button is clicked - it has a slifer for going between the different odds*/
+#odds-container, #odds-header, #set-odds { 
   position: absolute;
   left: 0; right: 0;
   margin: auto; 
@@ -303,7 +308,7 @@ iframe {
   color: whitesmoke;
 }
 
-#odds-container {
+#odds-container { /* container for setting the odds to a question */
   top: 30%;
   cursor: initial;
   background-color: rgba(184, 180, 180, 0.2);
@@ -393,7 +398,7 @@ iframe {
 }
 
 /* scene tab content */
-
+/*scene boxes - input for title and for textarea - the boxes contained in a window that is also scrollable*/
 #scene-window {
   width: 100%;
   height: 55vh;
@@ -405,7 +410,7 @@ iframe {
   box-sizing: border-box;
 }
 
-.scene-box {
+.scene-box { 
   width: 30%;;
   height: 200px;
   margin: 2px;
@@ -435,21 +440,21 @@ iframe {
   letter-spacing: 2px;
   overflow-y: scroll;
 }
-.scene-close {
+.scene-close { /*delete secne box*/
   position: absolute;
   right: 5%; bottom: 5%;
   font-size: 2em;
   cursor: pointer;
 }
 
-#scene-bottom-row {
+#scene-bottom-row { /*contains add scene button*/
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
 /* List tab content */
-
+/*contains space for two different types of list - characters and threads - taking up roughly 70/30 rule*/
 #list-container {
   width: 100%;
   height: 65vh;
@@ -468,6 +473,7 @@ iframe {
   overflow: auto;
  }
 
+ /*styling the scrollbars so that they blend in with app asthetics a bit more*/
 ::-webkit-scrollbar {
   width: 2px;
 }
@@ -513,11 +519,6 @@ input {
   background-color: rgba(0,0,0,0.1);
 }
 
-/* .addBtn:hover {
-
-} */
-
-
 ul {
   margin: 0;
   padding: 0;
@@ -532,10 +533,6 @@ ul {
   font-size: 1.8em;
 }
 
-/* .close:hover {
-  color: ;
-} */
-
 ul li {
   cursor: pointer;
   position: relative;
@@ -547,7 +544,6 @@ ul li {
   margin: 0 2.5%;
   display: inline-block;
 }
-
 
 /* footer */
 #footer {
@@ -568,7 +564,6 @@ ul li {
 #footer a {
   color: black;
 }
-
 
 /*media queries*/
 
