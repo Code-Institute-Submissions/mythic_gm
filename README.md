@@ -15,6 +15,11 @@
   - <a href="#footer">Footer</a>
 - <a href="#features-left">Features Left to Impliment</a>
 - <a href="#wireframes">Wireframes</a>
+- <a href="#tech">Technologies Used</a>
+- <a href="#test">Testing</a>
+- <a href="#deployment">Deployment</a>
+- <a href="#credits">Credits</a>
+
 
 <section id="about">
 
@@ -64,7 +69,7 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
 <section id="features">
 
   # Features
-  ## General Features <p id="general-features">
+  ## General Features <p id="general-features"></p>
   ### Fonts
   - <a href="https://fonts.google.com/specimen/Cinzel+Decorative?query=cinze">Cinzel Decorative</a> - Thematic font for Logo and any other headings and buttons.
   - <a href="https://fonts.google.com/specimen/Raleway?query=ralewa">Raleway</a> - text compliments Cinzel very well. Used mostly for About section.
@@ -78,20 +83,20 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
   - #e9e9e9 - how to section background color
   - Background image has a stained coffee kind of color to it.
 
-  ## Background Image <p id="background">
+  ## Background Image <p id="background"></p>
 
   <img src="assets/images/background.jpg">
 
   The background image is perfect for this app. It is reminiscent of an old map whll be very thematic to most rpg games. It is a nice contrast to the overall black and white colors present elsewhere.
 
 
-  ## Logo <p id="logo">
+  ## Logo <p id="logo"></p>
 
   <img src="assets/images/logo.png">
 
   The logo text was a very important consideration, because I wanted the text to look somewhat like the logo of the <a href="https://www.wordmillgames.com/mythic-rpg.html"> source book</a>.
 
-  ## How to section <p id="how-to">
+  ## How to section <p id="how-to"></p>
 
   ### Button
   <img src="assets/images/how-to-btn.png">
@@ -106,7 +111,7 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
 
   This gave me a lot of freedom to write as much content as I wanted for the how to use section without cluttering up the site and effecting the user experience. The app can be quite complicated to use, so I am very pleased with the how to section and how in depth it went with explaining everything and giving examples of use. 
 
-  ## Emulator <p id="emulator">
+  ## Emulator <p id="emulator"></p>
 
   <img src="assets/images/emulator.png">
 
@@ -116,7 +121,7 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
 
   The three tabs each display different content. The active tab is also a brighter color to remind users where they are. 
 
-  ## Oracle Tab <p id="oracle">
+  ## Oracle Tab <p id="oracle"></p>
 
   ### Chaos Number
 
@@ -140,7 +145,7 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
 
  When an answer is displayed - the emulator window will display a blur effect animation with the text in the center of the window. 
 
-## Journal Tab <p id="journal">
+## Journal Tab <p id="journal"></p>
 
  <img src="assets/images/journal-tab.png"></section>
 
@@ -150,7 +155,7 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
 
 users can add a scene box. It has space for a title and for the body of the scene text also. It is scrollable so a user can make it as short or long as desired. 
 
-## Lists Tab <p id="lists">
+## Lists Tab <p id="lists"></p>
 
  <img src="assets/images/lists-tab.png">
 
@@ -161,7 +166,7 @@ threads(plot points) that are relevant to the adventure.
 
  The input from both lists will be stored in an array that the oracle will randomly select from in some cases of random events. If they are empty nothing will be selected. 
 
-## Footer <p id="footer">
+## Footer <p id="footer"></p>
 
  <img src="assets/images/footer.png">
 
@@ -169,7 +174,7 @@ threads(plot points) that are relevant to the adventure.
 
  </section>
  
- # Features to Impliment <p id="features-left">
+ # Features to Impliment <p id="features-left"></p>
 
  ### NPC Generator 
  A feature to generate non playable characters with names and backstories. This is so the user will not have to pause the game and think of one by themselves. 
@@ -193,13 +198,13 @@ This would be useful for players who want to play but dont have access to dice
 There are another 2 books in the Mythic GM series that provide more options to players for using mythic. It would be great to impliment them into this app. 
 
 
-# Wireframes <p id="wireframes">
+# Wireframes <p id="wireframes"></p>
 
 Wireframes for the app 
 - <a href="assets/wireframes/desktop-tablet.pdf">Desktop & Tablet View</a>
 - <a href="assets/wireframes/phone.pdf">Phone View</a>
 
-# User Stories <p id="user stories">
+# User Stories <p id="user stories"></p>
 
 - As a GM/player, I want to supplement my game with mythic without the need for flipping through pages to find information.
 
@@ -226,7 +231,7 @@ There is plenty of random chance at work with mythic and yet the story should fe
 
 All of the text that could clutter then app is contained in a modal window with its own navigatable table of contents. The app is clutter free and is a true representation of the source material.
 
-# Technologies Used
+# Technologies Used <p id="tech"></p>
 
 [Gitpod](https://www.gitpod.io) 
 - IDE (Intigrated Development Environment)
@@ -261,6 +266,50 @@ All of the text that could clutter then app is contained in a modal window with 
 
 [Balsamiq](https://balsamiq.com/)
 - to make wireframes
+
+# Testing <p id="test"></p>
+Testing can be found in this file: [Testing](TESTING.md)
+
+<br>
+
+# Deployment <p id="deployment"></p>
+
+The site is deployed on git hub pages. The link is here:
+
+https://xiaoniuniu89.github.io/mythic_gm/
+
+The steps I used to deploy the site:
+- Go to [github.com](https://www.github.com)
+- Log into account
+- Click repositories
+- Click mythic_gm
+- click settings
+- scroll to pages section at the bottom 
+- under source heading click select main
+- The page will refresh with a blue background message that says the page is deployed and provide a link. If the message reads ready to be deployed, wait a few minutes and refresh the page. 
+
+How to run the code from the site 
+- Go to [github.com](https://www.github.com)
+- Log into account
+- Click repositories
+- Click mythic_gm
+- click the green code button that says clone or downlaod 
+- click Download ZIP
+- Open IDE [replit](https://replit.com/~)
+- upload folder/files
+
+How to clone repository
+- Go to [github.com](https://www.github.com)
+- Log into account
+- Click repositories
+- Click mythic_gm
+- click green code button that says clone or downlaod 
+- copy url link 
+- open or create repo 
+- go to terminal and type git clone and paste link
+
+
+# Credits <p id="credits"></p>
 
   https://www.pexels.com/photo/empty-brown-canvas-235985/
 
