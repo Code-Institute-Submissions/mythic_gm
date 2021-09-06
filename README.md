@@ -193,13 +193,39 @@ This would be useful for players who want to play but dont have access to dice
 There are another 2 books in the Mythic GM series that provide more options to players for using mythic. It would be great to impliment them into this app. 
 
 
-# Wireframes
+# Wireframes <p id="wireframes">
 
 Wireframes for the app 
 - <a href="assets/wireframes/desktop-tablet.pdf">Desktop & Tablet View</a>
 - <a href="assets/wireframes/phone.pdf">Phone View</a>
 
-  Background Image 
+# User Stories <p id="user stories">
+
+- As a GM/player, I want to supplement my game with mythic without the need for flipping through pages to find information.
+
+- As a GM/player, I want to use mythic without all of the usually involved bookkeeping.
+
+- As a player, I want a GM tool that can replace my group’s GM if they can not arrive at a session.
+
+- As a GM/player, I want the app to track all of my characters, plots, and threads. I do not want the immersion of the game stifled by having to think too much about what is happening to the
+story.
+
+- As a GM/player, I want any unnecessary dice rolls to be handled by the app. I should only be focused on my own character’s dice rolls.
+
+- As a Gm, I want my players to feel as if the story is unfolding naturally and not feel like I am pushing them towards one conclusion were their choices do not matter. 
+
+- As a GM/player, I want a clean, elegant app that is not cluttered with text. Anything to take me out of the immersive story is bad.
+
+All users needs should be met by this app. Everything they need is on one page. If they forget anything the how to use modal window is just one click away. 
+
+There is no extra dice rolls for players, and they can play a session by themselves if their GM can not make it. 
+
+All characters and plot threads are tracked and referenced when needed by the app. There is no extra book-keeping involved. 
+
+There is plenty of random chance at work with mythic and yet the story should feel organic to the point that the players' choices are shapping the world around them. 
+
+All of the text that could clutter then app is contained in a modal window with its own navigatable table of contents. The app is clutter free and is a true representation of the source material.
+
   https://www.pexels.com/photo/empty-brown-canvas-235985/
 
   modal box 
