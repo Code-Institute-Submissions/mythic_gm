@@ -170,6 +170,27 @@ threads(plot points) that are relevant to the adventure.
  
  # Features to Impliment <p id="features-left">
 
+ ### NPC Generator 
+ A feature to generate non playable characters with names and backstories. This is so the user will not have to pause the game and think of one by themselves. 
+
+ ### Encounter Generator 
+ A feature to generate encounters for the players. This would be an extention of the random event and event button. Ideally encounters should be fleshed out more so the players do not need to interperet an answer.
+
+ ### Scene/Mission Generator 
+ A feature to auto generate the scene action for the players so they have a goal without the need for planning.
+
+ ### Monster Stats 
+ This would involve a database of monsters and their stats from some of the more popular RPG systems like dungeons and dragons and pathfinder. 
+
+### Music 
+Music and background sounds - A simple music player to provide more atmosphere. 
+
+### 3D dice 
+This would be useful for players who want to play but dont have access to dice
+
+### Mythic Variations 1 & 2 
+There are another 2 books in the Mythic GM series that provide more options to players for using mythic. It would be great to impliment them into this app. 
+
   Background Image 
   https://www.pexels.com/photo/empty-brown-canvas-235985/
 
