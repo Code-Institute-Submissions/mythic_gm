@@ -226,6 +226,42 @@ There is plenty of random chance at work with mythic and yet the story should fe
 
 All of the text that could clutter then app is contained in a modal window with its own navigatable table of contents. The app is clutter free and is a true representation of the source material.
 
+# Technologies Used
+
+[Gitpod](https://www.gitpod.io) 
+- IDE (Intigrated Development Environment)
+
+[Github](https://www.github.com)
+- remote repository hosting platform
+
+[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) & [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) & [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+- Languages Used to make the site
+
+[Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)
+- Used to check site responsivness
+
+[Jigsaw](https://jigsaw.w3.org/css-validator/)
+- Check for CSS errors
+
+[HTML Validator](https://validator.w3.org/)
+- Check for HTML errors
+
+[jshint](https://jshint.com/)
+- check for JavaScript errors
+
+[Youtube](https://www.youtube.com)
+- Videos embedded from here
+
+[I love images](https://www.iloveimg.com/crop-image)
+- To resive and crop photos
+
+[Font Awesome](https://fontawesome.com/)
+- for Icons in boxes and footer
+
+[Balsamiq](https://balsamiq.com/)
+- to make wireframes
+
   https://www.pexels.com/photo/empty-brown-canvas-235985/
 
   modal box 
