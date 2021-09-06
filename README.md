@@ -129,8 +129,16 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
 
  When an answer is displayed - the emulator window will display a blur effect animation with the text in the center of the window. 
 
+## Journal Tab 
 
-</section>
+ <img src="assets/images/journal-tab.png"></section>
+
+ The journal tab is a place the user can chronical their adventure. 
+
+<img src="assets/images/add-scene.png">
+
+users can add a scene box. It has space for a title and for the body of the scene text also. It is scrollable so a user can make it as short or long as desired. 
+
 
   Background Image 
   https://www.pexels.com/photo/empty-brown-canvas-235985/
