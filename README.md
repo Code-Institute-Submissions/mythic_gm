@@ -4,6 +4,16 @@
 - <a href="#about">About Mythic</a> 
 - <a href="#ux">UX Design</a>
 - <a href="#features">Features</a>
+  - <a href="#general-features">General Features</a>
+  - <a href="#background">Background</a>
+  - <a href="#logo">Logo</a>
+  - <a href="#how-to">How to Modal</a>
+  - <a href="#emulator">Emulator</a>
+  - <a href="#oracle">Oracle</a>
+  - <a href="#journal">Journal</a>
+  - <a href="#lists">Lists</a>
+  - <a href="#footer">Footer</a>
+- <a href="#features-left">Features Left to Impliment</a>
 
 <section id="about">
 
@@ -53,7 +63,7 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
 <section id="features">
 
   # Features
-  ## General Features
+  ## General Features <p id="general-features">
   ### Fonts
   - <a href="https://fonts.google.com/specimen/Cinzel+Decorative?query=cinze">Cinzel Decorative</a> - Thematic font for Logo and any other headings and buttons.
   - <a href="https://fonts.google.com/specimen/Raleway?query=ralewa">Raleway</a> - text compliments Cinzel very well. Used mostly for About section.
@@ -67,20 +77,20 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
   - #e9e9e9 - how to section background color
   - Background image has a stained coffee kind of color to it.
 
-  ## Background Image 
+  ## Background Image <p id="background">
 
   <img src="assets/images/background.jpg">
 
   The background image is perfect for this app. It is reminiscent of an old map whll be very thematic to most rpg games. It is a nice contrast to the overall black and white colors present elsewhere.
 
 
-  ## Logo 
+  ## Logo <p id="logo">
 
   <img src="assets/images/logo.png">
 
   The logo text was a very important consideration, because I wanted the text to look somewhat like the logo of the <a href="https://www.wordmillgames.com/mythic-rpg.html"> source book</a>.
 
-  ## How to section 
+  ## How to section <p id="how-to">
 
   ### Button
   <img src="assets/images/how-to-btn.png">
@@ -95,7 +105,7 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
 
   This gave me a lot of freedom to write as much content as I wanted for the how to use section without cluttering up the site and effecting the user experience. The app can be quite complicated to use, so I am very pleased with the how to section and how in depth it went with explaining everything and giving examples of use. 
 
-  ## Emulator 
+  ## Emulator <p id="emulator">
 
   <img src="assets/images/emulator.png">
 
@@ -105,7 +115,7 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
 
   The three tabs each display different content. The active tab is also a brighter color to remind users where they are. 
 
-  ## Oracle Tab 
+  ## Oracle Tab <p id="oracle">
 
   ### Chaos Number
 
@@ -129,7 +139,7 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
 
  When an answer is displayed - the emulator window will display a blur effect animation with the text in the center of the window. 
 
-## Journal Tab 
+## Journal Tab <p id="journal">
 
  <img src="assets/images/journal-tab.png"></section>
 
@@ -139,7 +149,7 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
 
 users can add a scene box. It has space for a title and for the body of the scene text also. It is scrollable so a user can make it as short or long as desired. 
 
-## Lists Tab
+## Lists Tab <p id="lists">
 
  <img src="assets/images/lists-tab.png">
 
@@ -150,13 +160,15 @@ threads(plot points) that are relevant to the adventure.
 
  The input from both lists will be stored in an array that the oracle will randomly select from in some cases of random events. If they are empty nothing will be selected. 
 
-## Footer 
+## Footer <p id="footer">
 
  <img src="assets/images/footer.png">
 
  The footer is extremely simple. It has links to some social media sites about me. 
 
  </section>
+ 
+ # Features to Impliment <p id="features-left">
 
   Background Image 
   https://www.pexels.com/photo/empty-brown-canvas-235985/
