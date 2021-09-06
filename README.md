@@ -139,6 +139,24 @@ The layout it very simple. I wanted to experiment with tabs for this app, so I m
 
 users can add a scene box. It has space for a title and for the body of the scene text also. It is scrollable so a user can make it as short or long as desired. 
 
+## Lists Tab
+
+ <img src="assets/images/lists-tab.png">
+
+ The lists tab is a place to keep track of any non playable characters/groups and 
+threads(plot points) that are relevant to the adventure.
+
+ <img src="assets/images/lists-ex.png">
+
+ The input from both lists will be stored in an array that the oracle will randomly select from in some cases of random events. If they are empty nothing will be selected. 
+
+## Footer 
+
+ <img src="assets/images/footer.png">
+
+ The footer is extremely simple. It has links to some social media sites about me. 
+
+ </section>
 
   Background Image 
   https://www.pexels.com/photo/empty-brown-canvas-235985/
