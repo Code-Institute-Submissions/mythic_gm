@@ -3,7 +3,7 @@
 ## Table of contents
 - <a href="#about">About Mythic</a> 
 - <a href="#ux">UX Design</a>
-- 
+- <a href="#features">Features</a>
 
 <section id="about">
 
@@ -49,6 +49,13 @@ In my research I found a couple of apps that do the same thing as my app, but th
 The layout it very simple. I wanted to experiment with tabs for this app, so I made the app all on one page. This means less time wasted trying to load pages and trying to find information. 
 
 All of the text explaining how to use the app is found in a modal window that the user can open without going to a new page. This also gave me a lot of freedom to write as much content as I wanted for the how to use section without cluttering up the site and effecting the user experience. The app can be quite complicated to use, so I am very pleased with the how to section and how in depth it went with explaining everything and giving examples of use. 
+
+</section>
+
+<section id="features">
+
+
+
 
 </section>
 
