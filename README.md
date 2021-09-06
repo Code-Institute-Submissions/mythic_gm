@@ -48,12 +48,52 @@ In my research I found a couple of apps that do the same thing as my app, but th
 
 The layout it very simple. I wanted to experiment with tabs for this app, so I made the app all on one page. This means less time wasted trying to load pages and trying to find information. 
 
-All of the text explaining how to use the app is found in a modal window that the user can open without going to a new page. This also gave me a lot of freedom to write as much content as I wanted for the how to use section without cluttering up the site and effecting the user experience. The app can be quite complicated to use, so I am very pleased with the how to section and how in depth it went with explaining everything and giving examples of use. 
-
 </section>
 
 <section id="features">
 
+# Features
+## General Features
+### Fonts
+- <a href="https://fonts.google.com/specimen/Cinzel+Decorative?query=cinze">Cinzel Decorative</a> - Thematic font for Logo and any other headings and buttons.
+- <a href="https://fonts.google.com/specimen/Raleway?query=ralewa">Raleway</a> - text compliments Cinzel very well. Used mostly for About section.
+- <a href="https://fonts.google.com/specimen/Eater?query=Eater">Eater</a> - Any text generated in the oracle uses this text. I wanted the feeling that the answers were coming from another realm or a magic mirror - something like that.
+
+### Color 
+Color are kept mostly black and white except for the background image which I think has a kind of pirate map/adventure map coffee stain to it. 
+The main colors are:
+- Black - Emulator Window
+- Whitesmoke - text. I wanted to have a bone white kind of color to any text in the emulator. As if the user was casting old runes.
+- #e9e9e9 - how to section background color
+- Background image has a stained coffee kind of color to it.
+
+## Background Image 
+
+<img src="assets/images/background.jpg">
+
+The background image is perfect for this app. It is reminiscent of an old map whll be very thematic to most rpg games. It is a nice contrast to the overall black and white colors present elsewhere.
+
+
+## Logo 
+
+<img src="assets/images/logo.png">
+
+The logo text was a very important consideration, because I wanted the text to look somewhat like the logo of the <a href="https://www.wordmillgames.com/mythic-rpg.html"> source book</a>.
+
+## How to section 
+
+### Button
+<img src="assets/images/how-to-btn.png">
+
+### Modal
+<img src="assets/images/how-to-modal.png">
+
+
+All of the text explaining how to use the app is found in a modal window that the user can open without going to a new page. 
+
+It will darken the background to create contrast with the app and it has its own unique scrollbar which I feel will not distract from the asthetics of the app.
+
+This gave me a lot of freedom to write as much content as I wanted for the how to use section without cluttering up the site and effecting the user experience. The app can be quite complicated to use, so I am very pleased with the how to section and how in depth it went with explaining everything and giving examples of use. 
 
 
 
