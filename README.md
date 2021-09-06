@@ -14,6 +14,7 @@
   - <a href="#lists">Lists</a>
   - <a href="#footer">Footer</a>
 - <a href="#features-left">Features Left to Impliment</a>
+- <a href="#wireframes">Wireframes</a>
 
 <section id="about">
 
@@ -190,6 +191,13 @@ This would be useful for players who want to play but dont have access to dice
 
 ### Mythic Variations 1 & 2 
 There are another 2 books in the Mythic GM series that provide more options to players for using mythic. It would be great to impliment them into this app. 
+
+
+# Wireframes
+
+Wireframes for the app 
+- <a href="assets/wireframes/desktop-tablet.pdf">Desktop & Tablet View</a>
+- <a href="assets/wireframes/phone.pdf">Phone View</a>
 
   Background Image 
   https://www.pexels.com/photo/empty-brown-canvas-235985/
