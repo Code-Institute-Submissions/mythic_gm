@@ -475,10 +475,6 @@ iframe {
   width: 2px;
 }
 
-::-webkit-scrollbar-track {
-  background: black;
-}
-
 ::-webkit-scrollbar-thumb {
   background: whitesmoke;
   border-radius: 2em;
