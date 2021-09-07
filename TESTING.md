@@ -94,8 +94,6 @@ https://www.youtube.com/watch?v=JIy4kP-j44E
 
 The app was tested on the following browsers:
 
-## Desktop & Tablet 
-
 - [Google Chrome](https://www.google.com/chrome/?brand=FHFK&gclid=CjwKCAjw092IBhAwEiwAxR1lRnrDJkW2rc2m-_DsqG2ISAAChH0tbKgopfm-3BMuide3ikPssZgvWhoCsVUQAvD_BwE&gclsrc=aw.ds)
 
 - [Firefox](https://www.mozilla.org/en-US/firefox/) 
@@ -106,8 +104,11 @@ The app was tested on the following browsers:
 
 - [Safari](https://www.apple.com/uk/safari/)
 
-The site works well on all browsers with only one main issue. There is a huge difference in how the scroll bars render in some browsers. 
-The color is slightly more grey on edge and firefox. 
+The site looks great on all browsers and I could find two main issues. 
+
+- minor issue - The color is slightly more grey and less vibrant on edge and firefox. 
+- major issue - There is a huge difference in how the scroll bars render in some browsers. 
+
 
 ### How to use section scrollbar
 In Google Chrome, safari, opera and edge there is little to no deifference in how it is rendered. It is a thin black line. In firefox it is rendered as a grey line, sligthly fatter with less opacity. 
