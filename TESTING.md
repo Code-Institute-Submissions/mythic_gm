@@ -154,3 +154,21 @@ edge and safari
 Edge and Safari have no background and the scroll bar is half on the emulator window and half outside. 
 
 <img src="assets/images/edge-journal-scroll.png">
+
+
+# Bugs 
+
+When the blur animation is finished, depending on the browser it can be highlighted and displayed again that way. 
+
+<img src="assets/images/bug-highlight.png">
+
+
+The scroll bar sticks out slightly due to the border radius on the modal window. 
+
+<img src="assets/images/bug-scroll.png">
+
+The close button in the modal window sometimes obscures text a little. 
+
+<img src="assets/images/bug-close.png">
+
+Firefox scroll not rendering on black background.
