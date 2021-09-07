@@ -311,8 +311,43 @@ How to clone repository
 
 # Credits <p id="credits"></p>
 
-  https://www.pexels.com/photo/empty-brown-canvas-235985/
+## Content
 
-  modal box 
-  https://www.w3schools.com/howto/howto_css_modals.asp
+### Text
+- The Mythic GM system rules, all text displayed in the display box in the oracle tab of the emulator, the description of Mythic, table top roleplaying games and the glossary in the how to section modal window were all written by [Tana Pigeon](https://www.patreon.com/wordmillgames) of [Word Mill Games](https://www.wordmillgames.com/) for her book [Mythic Game Master Emulator](https://www.drivethrurpg.com/product/16173/Mythic-Role-Playing?it=1). Descriptions in the how to section were edited somewhat by me so as to make sense in relation to the app, or in an attempt to condense some explenations. 
+- all other text was by me 
+
+### Media
+#### Images
+- Background Image   https://www.pexels.com/photo/empty-brown-canvas-235985/
+
+#### Videos
+- All videos hosted on [youtube](www.youtube.com)
+  - Mythic in use - [Me Myself & Die](https://www.youtube.com/channel/UCtiBzkVoYrugJkrpW7_75Ag)
+  - Dungeons & Dragons explained - [Vox](https://www.youtube.com/channel/UCLXo7UDZvByw2ixzpQCufnA)
+
+
+### Code
+I had to rely heavily on web tutorials to implement most of the features. Sometimes I did not understand everything I was writing, and so documentation about the main JavaScript functions can be found here: [JavaScript Functions](FUNCTIONS.md)
+
+The tutorials I used are as follows: 
+
+- Modals - https://www.w3schools.com/howto/howto_css_modals.asp
+- Text blur animation
+  - https://css-tricks.com/fun-with-blurred-text/
+  - https://codepen.io/onge/pen/KwdZpE
+- Slider (for the set odds feature) - https://www.w3schools.com/howto/howto_js_quotes_slideshow.asp
+- To do list (Lists tab content) - https://www.w3schools.com/howto/howto_js_todolist.asp
+- Scrollbar - https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
+
+
+# Aknowledgements
+- My mentor Precious 
+
+- Tana Pigeon 
+
+
+
+
+
 
