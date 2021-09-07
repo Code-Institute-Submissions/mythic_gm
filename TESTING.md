@@ -63,3 +63,19 @@ As a GM/player/group, I want the option of immersive music in the background.
 
 As a GM/player, I want a clean elegant app that is not cluttered with text. Anything to take me out of the immersive story is bad.
 - Any text that is not relevant to the funciton of the app is in the how to modal window. 
+
+# Responsive Testing 
+
+The app is fully responsive. I wanted to experiment more with vh and vw measurments in this app. The desktop and tablet view are both the same. 
+
+Media queries mainly deal with making text smaller.
+
+The lists tab content, characters and threads, start as flex items taking 70% and 30% respectivly of the emulator window but will change to being block elements stacked at smaller screen width.
+
+The journal tab contents start 3 divs per row but will also change to block elements with 1 per row at smaller screen width. 
+
+The media queries also take into account viewport height. The emulator window can not contain all of the buttons and text at smaller screen width so the emulator window is made longer for mobile view. 
+
+## Video of Responsivness Testing 
+
+https://www.youtube.com/watch?v=JIy4kP-j44E
