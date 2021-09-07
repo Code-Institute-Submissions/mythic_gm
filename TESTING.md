@@ -75,11 +75,11 @@ This is fully responsive - the only difference is that the iframes will change s
 
 ### Oracle tab
 
-The buttons and chaos number will get smaller as the screen width is lowered, but overall there is no drastic change except for the emulator window becoming longer for mobile view. 
+The buttons and chaos number will get smaller as the screen width is lowered, but overall there is no drastic change except for the emulator window becoming longer for mobile view. Button and font size for the button will get smaller in relation to sreen width also.
 
 ### Journal Tab
 
-The journal tab contents start 3 divs per row but will change to block elements with 1 per row at smaller screen width. 
+The journal tab contents start 3 divs per row but will change to block elements with 1 per row at smaller screen width. Button size and font size will also get smaller.
 
 ### Lists Tab
 The lists tab content, characters and threads, start as flex items taking roughly 70% and 30% respectivly of the emulator window but will change to being block elements stacked at smaller screen width.
@@ -88,3 +88,69 @@ The lists tab content, characters and threads, start as flex items taking roughl
 ## Video of Responsivness Testing 
 
 https://www.youtube.com/watch?v=JIy4kP-j44E
+
+
+# Browser Compatibility 
+
+The app was tested on the following browsers:
+
+## Desktop & Tablet 
+
+- [Google Chrome](https://www.google.com/chrome/?brand=FHFK&gclid=CjwKCAjw092IBhAwEiwAxR1lRnrDJkW2rc2m-_DsqG2ISAAChH0tbKgopfm-3BMuide3ikPssZgvWhoCsVUQAvD_BwE&gclsrc=aw.ds)
+
+- [Firefox](https://www.mozilla.org/en-US/firefox/) 
+
+- [Opera](www.opera.com) 
+
+- [Edge](https://www.microsoft.com/en-us/edge) 
+
+- [Safari](https://www.apple.com/uk/safari/)
+
+The site works well on all browsers with only one main issue. There is a huge difference in how the scroll bars render in some browsers. 
+The color is slightly more grey on edge and firefox. 
+
+### How to use section scrollbar
+In Google Chrome, safari, opera and edge there is little to no deifference in how it is rendered. It is a thin black line. In firefox it is rendered as a grey line, sligthly fatter with less opacity. 
+
+Chrome 
+
+<img src="assets/images/chrome-how-scroll.png">
+
+Firefox 
+
+<img src="assets/images/fire-how-scroll.png">
+
+### Journal Tab 
+
+Chrome Render the scrollbar outside the emulator window with no black background. 
+
+<img src="assets/images/chrome-journal-scroll.png">
+
+Firefox does not render the scrollbar or it is hidden by the emulator black background. Although you can still scroll. 
+
+<img src="assets/images/fire-journal-scroll.png">
+
+Edge and Safari have no background and the scroll bar is half on the emulator window and half outside. 
+
+<img src="assets/images/edge-journal-scroll.png">
+
+Opera renders outside the emulator window with a black background. 
+
+<img src="assets/images/opera-journal-scroll.png">
+
+
+### Lists tab 
+
+Chrome and safari render with no background outside the emulator window. 
+
+<img src="assets/images/chrome-journal-scroll.png">
+
+Firefox again does not render due to black background but is fully functional. 
+
+<img src="assets/images/fire-journal-scroll.png">
+
+edge and safari 
+
+Edge and Safari have no background and the scroll bar is half on the emulator window and half outside. 
+
+<img src="assets/images/edge-journal-scroll.png">
