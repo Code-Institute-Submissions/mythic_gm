@@ -68,13 +68,22 @@ As a GM/player, I want a clean elegant app that is not cluttered with text. Anyt
 
 The app is fully responsive. I wanted to experiment more with vh and vw measurments in this app. The desktop and tablet view are both the same. 
 
-Media queries mainly deal with making text smaller.
+Media queries mainly deal with making text smaller and making the viewport height larger for mobile. 
 
-The lists tab content, characters and threads, start as flex items taking 70% and 30% respectivly of the emulator window but will change to being block elements stacked at smaller screen width.
+### How to use section 
+This is fully responsive - the only difference is that the iframes will change size at 870 px to 80% of the modal window. 
 
-The journal tab contents start 3 divs per row but will also change to block elements with 1 per row at smaller screen width. 
+### Oracle tab
 
-The media queries also take into account viewport height. The emulator window can not contain all of the buttons and text at smaller screen width so the emulator window is made longer for mobile view. 
+The buttons and chaos number will get smaller as the screen width is lowered, but overall there is no drastic change except for the emulator window becoming longer for mobile view. 
+
+### Journal Tab
+
+The journal tab contents start 3 divs per row but will change to block elements with 1 per row at smaller screen width. 
+
+### Lists Tab
+The lists tab content, characters and threads, start as flex items taking roughly 70% and 30% respectivly of the emulator window but will change to being block elements stacked at smaller screen width.
+
 
 ## Video of Responsivness Testing 
 
