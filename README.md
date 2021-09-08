@@ -329,7 +329,6 @@ How to clone repository
 
 
 ### Code
-I had to rely heavily on web tutorials to implement most of the features. Sometimes I did not understand everything I was writing, and so documentation about the main JavaScript functions can be found here: [JavaScript Functions](FUNCTIONS.md)
 
 The tutorials I used are as follows: 
 
