@@ -399,11 +399,19 @@ for (i = 0; i < closeList.length; i++) {
   };
 }
 
-let npcArray = [];
-
 // add to the character list
 let charAddBtn = document.getElementById("character-btn");
-charAddBtn.onclick = function() {
+charAddBtn.addEventListener("click", addChar)
+
+document.getElementById("char-input").addEventListener("keydown", function(event){
+  if(event.key === "Enter"){
+    addChar()
+  }
+})
+
+let npcArray = [];
+
+function addChar() {
   var li = document.createElement("LI");
   var inputValue = document.getElementById("char-input").value;
   var t = document.createTextNode(inputValue);
@@ -435,11 +443,21 @@ charAddBtn.onclick = function() {
   }
 };
 
-let threadArray = [];
+
 
 // add to the thread list 
 let threadAddBtn = document.getElementById("thread-btn");
-threadAddBtn.onclick = function() {
+threadAddBtn.addEventListener("click", addThread)
+
+document.getElementById("thread-input").addEventListener("keydown", function(event){
+  if(event.key === "Enter"){
+    addThread()
+  }
+})
+
+let threadArray = [];
+
+function addThread() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("thread-input").value;
   var t = document.createTextNode(inputValue);
@@ -470,6 +488,7 @@ threadAddBtn.onclick = function() {
     };
   }
 };
+
 
 
 
