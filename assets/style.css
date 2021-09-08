@@ -761,4 +761,8 @@ ul li {
   #emulator {
     height: 150vh;
   }
+
+  #scene-window {
+    height: 110vh;
+  }
 }

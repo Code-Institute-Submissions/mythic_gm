@@ -74,7 +74,7 @@ function cancel(){
 
 //Open tab - close other tab and remove active class. add active class to new tab
 function openTab(evt, tabName) {
-  cancel(); //close previous tab
+  cancel(); //close displaybox text
   for(let i = 0; i < tabcontent.length; i++){
     tabcontent[i].style.display = "none"; // close all tabs display
   }
