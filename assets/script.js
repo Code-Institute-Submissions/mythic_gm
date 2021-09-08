@@ -416,9 +416,9 @@ function addChar() {
   var inputValue = document.getElementById("char-input").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
-  if (inputValue.match(/[0-9a-zA-z]/g)) {
+  if (inputValue.match(/[0-9a-zA-z]/g)) { // input validation
     npcArray.push(inputValue);
-    console.log(npcArray);
+    console.log(npcArray); // check if function is working
     document.getElementById("char-ul").appendChild(li);
   } else {
     alert("You must write something!");
@@ -430,11 +430,11 @@ function addChar() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
-  // add input to array 
+  // delete from array 
   for (i = 0; i < closeList.length; i++) {
     closeList[i].onclick = function() {
       var div = this.parentElement;
-      var value = this.parentElement.firstChild.textContent;
+      var value = this.parentElement.firstChild.textContent; 
       var index = npcArray.indexOf(value);
       npcArray.splice(index, 1);
       console.log(npcArray);
