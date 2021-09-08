@@ -137,9 +137,19 @@ The layout is very simple. I wanted to experiment with tabs for this app, so I m
 
   The start scene button is used whenever the user starts a new scene/chapter. The higher the chaos number the higher the chance of something random happening at the start of a scene. 
 
- The question button lets users ask Mythic yes/no questions. When clicked users are prompted to select the odds of their question being yes. The higher the chaos number, the higher the chance the question will be yes. There is also the possibility of a random event happening here. 
+ The question button lets users ask Mythic yes/no questions. When clicked users are prompted to select the odds of their question being yes. The higher the chaos number, the higher the chance the question will be yes. There is also the possibility of a random event happening here. It is  
+ referred to as the Fate chart in the source material. 
+
+ <img src="assets/images/fate-chart.png">
 
  The event button generates two random keywords that the user will interpret to give direction to the story or to flesh out a yes/no answer.
+
+
+ <img src="assets/images/event-keywords.png">
+
+ each random keyword is stored in an array containing 100 words. In the source material, a user accesses these by rolling percentile dice. 
+
+
 
  <img src="assets/images/display-ex.png">
 
