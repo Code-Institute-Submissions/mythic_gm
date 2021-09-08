@@ -343,11 +343,11 @@ The tutorials I used are as follows:
 
 
 # Aknowledgements
-- My mentor Precious who put up with me trying to explain this incredibly nerdy app. Thanks for your patience, all of your time and for all of the great advice you have given me since I started at code institute. 
+- My mentor Precious who put up with me trying to explain this incredibly nerdy app. 
 
-- Tana Pigeon for creating Mythic. It is such an incredible book and it must have taken so much time to put together.
+- Tana Pigeon for creating Mythic.
 
-- CC & Eoin for all of the playtesting and patience as I learned how to use Mythic. 
+- CC, Fiach & Eoin for playtesting.
  
 
 
