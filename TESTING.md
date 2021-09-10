@@ -97,7 +97,7 @@ https://www.youtube.com/watch?v=JIy4kP-j44E
 
 # Browser Compatibility 
 
-The app was tested on the following browsers on desktop and mobile with only two issues found:
+The app was tested on the following browsers on desktop and mobile:
 
 - [Google Chrome](https://www.google.com/chrome/?brand=FHFK&gclid=CjwKCAjw092IBhAwEiwAxR1lRnrDJkW2rc2m-_DsqG2ISAAChH0tbKgopfm-3BMuide3ikPssZgvWhoCsVUQAvD_BwE&gclsrc=aw.ds)
 
@@ -109,9 +109,9 @@ The app was tested on the following browsers on desktop and mobile with only two
 
 - [Safari](https://www.apple.com/uk/safari/)
 
-- minor issue - The color is slightly more grey and less vibrant on edge and firefox. 
+<img src="assets/images/browser-test.png">
 
-- major issue - There is a big difference in how the scroll bars render in some browsers. 
+As shown above - edge seemed to be zoomed in - I would guess 125% zoom.
 
 
 # Bugs 
