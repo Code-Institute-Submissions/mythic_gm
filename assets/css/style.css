@@ -78,17 +78,26 @@ body {
 }
 
 /*close button in modal*/
-#close-how-to {
-  float: right;
+
+#close-how-to, #back-to-top{
   font-size: 2em;
   text-decoration: none;
   border: none;
   background-color: rgba(233,233,233,0.1);
+}
+
+#close-how-to {
+  float: right;
   position: fixed; right: 15%;
 }
 
-#close-how-to:hover, #close-how-to:focus {
-  color: black;
+#back-to-top{
+  float: left;
+  position: fixed; 
+}
+
+#close-how-to:hover, #close-how-to:focus, #back-to-top:hover, #back-to-top:focus {
+  color: rgba(65, 62, 62, 0.65);
   text-decoration: none;
   cursor: pointer;
 }
@@ -681,6 +690,10 @@ ul li {
     width: 85vw;
     position: relative;
     bottom: 7%
+  }
+
+  #close-how-to{
+    left:82.5%;
   }
 
   .extra {
