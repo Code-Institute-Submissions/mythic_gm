@@ -17,6 +17,7 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+
 #logo {
   text-align: center;
   font-size: 3.5em;
@@ -49,7 +50,7 @@ body {
   background-color: rgba(65, 62, 62, 0.65);
 }
 
-/*Modal Background*/
+/*How to section Background*/
 .modal {
   display: none;
   position: fixed;
@@ -60,7 +61,7 @@ body {
   height: 100%;
 }
 
-/*modal content*/
+/*how to section content*/
 .how-to-content {
   margin: 0 auto; 
   padding: 20px;
@@ -72,12 +73,13 @@ body {
   overflow-y: scroll;
 }
 
+/*to center content in how to section*/
 .how-to-content p, h3, h4 {
   text-align: center;
   letter-spacing: 1px;
 }
 
-/*close button in modal*/
+/*close and back to top button in how to section*/
 
 #close-how-to, #back-to-top{
   font-size: 2em;
@@ -102,7 +104,7 @@ body {
   cursor: pointer;
 }
 
-/* scrollbar for modal*/
+/* scrollbar */
 .how-to-content::-webkit-scrollbar-track {
   background: none;
 }
@@ -260,7 +262,7 @@ iframe {
   animation-duration: 6s;
 }
 
-@keyframes blur { /* display text in a blur in blur out animation - https://css-tricks.com/fun-with-blurred-text/ - https://codepen.io/onge/pen/KwdZpE*/
+@keyframes blur { /* display text in a blur in blur out animation - help from these outside sources -  https://css-tricks.com/fun-with-blurred-text/ - https://codepen.io/onge/pen/KwdZpE*/
 	0%	{text-shadow:  0 0 90px #fff; opacity:0;}
 	5%	{text-shadow:  0 0 80px #fff;}
   10%	{text-shadow:  0 0 70px #fff;}
@@ -355,7 +357,7 @@ iframe {
   display: none;
 }
 
-/* Next & previous buttons */
+/* odds Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -450,7 +452,8 @@ iframe {
   letter-spacing: 2px;
   overflow-y: scroll;
 }
-.scene-close { /*delete secne box*/
+
+.scene-close { /*delete scene box*/
   position: absolute;
   right: 5%; bottom: 5%;
   font-size: 2em;
