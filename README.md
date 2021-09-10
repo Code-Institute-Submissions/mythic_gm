@@ -285,6 +285,9 @@ There are another 2 books in the Mythic GM series that provide more options to p
 [Balsamiq](https://balsamiq.com/)
 - to make wireframes
 
+[Website Responsive Test](http://responsivetesttool.com/)
+- to check responsivness on different devices
+
 # Testing <p id="test"></p>
 Testing can be found in this file: [Testing](TESTING.md)
 
