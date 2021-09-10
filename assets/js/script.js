@@ -249,7 +249,7 @@ if the number is divisible by 11 then a a different funciton will be called. thi
 a random event with a focus. */
 
 function generateAnswer(){
-  randomInt = (Math.floor(Math.random() * 100 +1 ));
+  var randomInt = (Math.floor(Math.random() * 100 +1 ));
   if(randomInt % 11 == 0 && (randomInt / 11) < (chaosNumber +1)){
     randomEventAnswer();
   } else {
@@ -274,7 +274,7 @@ function randomEventAnswer() {
   let npcFocus = npcArray[Math.floor(Math.random() * npcArray.length)];
   let threadFocus = threadArray[Math.floor(Math.random() * threadArray.length)];
   let randomInt = (Math.floor(Math.random() * 100 +1 ));
-  // no additional focus beyond eventFocus array
+  // no additional variables
   if(randomIntFocus < 5 || npcArray.length === 0 || threadArray.length === 0) {
     if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
       displayBox.innerHTML = `<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`;
@@ -285,7 +285,7 @@ function randomEventAnswer() {
     }else {
     displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3>`;
     }
-    // with additional npcFocus 
+    // with additional npcArray variable 
   }else if (randomIntFocus < 8) {
     if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
       displayBox.innerHTML = `<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${npcFocus}</h3>`;
@@ -296,7 +296,7 @@ function randomEventAnswer() {
     }else {
     displayBox.innerHTML = `<h3 class='word'>No</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${npcFocus}</h3>`;
     }
-    //with an additional thread focus
+    //with an additional threadArray variable
   }else {
     if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
       displayBox.innerHTML = `<h3 class='word'>yes</h3><h3 class='word'>Exceptional</h3><h3 class='word'>Random Event</h3><h3 class='word'>${eventFocusValue}</h3><h3 class='word'>${threadFocus}</h3>`;
@@ -398,13 +398,13 @@ for (i = 0; i < closeList.length; i++) {
 // add to the character list
 //click
 let charAddBtn = document.getElementById("character-btn");
-charAddBtn.addEventListener("click", addChar)
+charAddBtn.addEventListener("click", addChar);
 //on enter
 document.getElementById("char-input").addEventListener("keydown", function(event){
   if(event.key === "Enter"){
-    addChar()
+    addChar();
   }
-})
+});
 
 let npcArray = []; //values typed in by user get stored in an array to be used by oracle tab
 // this will add the input from the user to the character/group list
@@ -436,20 +436,21 @@ function addChar() {
       div.style.display = "none";
     };
   }
-};
+}
 
 
 
 // add to the thread list 
 //click
 let threadAddBtn = document.getElementById("thread-btn");
-threadAddBtn.addEventListener("click", addThread)
+threadAddBtn.addEventListener("click", addThread);
 // on enter 
 document.getElementById("thread-input").addEventListener("keydown", function(event){
   if(event.key === "Enter"){
-    addThread()
+    addThread();
   }
-})
+});
+
 //user input stored in array to be used in oracle tab
 let threadArray = [];
 //this function will add the user input to a list to be displayed in emulator window
@@ -481,7 +482,7 @@ function addThread() {
       div.style.display = "none";
     };
   }
-};
+}
 
 
 
