@@ -193,7 +193,7 @@ function showSlides(n) {
 }
 
 /*fate chart functions
-// the fate chart is a reference from the source material book. Information about it can be found in the readme file. 
+the fate chart is a reference from the source material book. Information about it can be found in the readme file. 
 it essentially compares a dice roll with an odds table and the chaos number to see the outcome of a yes/no question.*/
 
 //this funciton gets the inner html of the text slider on the odds modal window as a string to be used in the next funciton.
