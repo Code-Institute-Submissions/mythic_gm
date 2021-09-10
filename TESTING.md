@@ -113,6 +113,7 @@ The app was tested on the following browsers on desktop and mobile with only two
 
 - major issue - There is a big difference in how the scroll bars render in some browsers. 
 
+
 # Bugs 
 
 When the blur animation is finished, depending on the browser it can be highlighted and displayed again that way. 
