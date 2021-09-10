@@ -3,8 +3,11 @@
 ## Table of contents
 - <a href="#about">About Mythic</a> 
 - <a href="#ux">UX Design</a>
+  - <a a href="#user-stories">User Stories</a>
+  - <a href="#typography">Typography</a>
+  - <a href="#color">Color</a>
+  - <a href="#wireframes">Wireframes</a>
 - <a href="#features">Features</a>
-  - <a href="#general-features">General Features</a>
   - <a href="#background">Background</a>
   - <a href="#logo">Logo</a>
   - <a href="#how-to">How to Modal</a>
@@ -13,8 +16,7 @@
   - <a href="#journal">Journal</a>
   - <a href="#lists">Lists</a>
   - <a href="#footer">Footer</a>
-- <a href="#features-left">Features Left to Impliment</a>
-- <a href="#wireframes">Wireframes</a>
+  - <a href="#features-left">Features Left to Impliment</a>
 - <a href="#tech">Technologies Used</a>
 - <a href="#test">Testing</a>
 - <a href="#deployment">Deployment</a>
@@ -23,6 +25,7 @@
 
 <section id="about">
 
+# About Mythic
   Mythic GM is a digital implementation of the <a href="https://www.drivethrurpg.com/product/20798/Mythic-Game-Master-Emulator" target="_blank">Mythic Game Master Emulator</a>. It is a tool for tabletop role-playing games like Dungeons & Dragons and Call of Cthulhu.
   
   Role-Playing Games are collaborative storytelling games played with pen and paper. They take place in the players' collective imagination and use dice to randomly determine the outcome of player choices in the story. 
@@ -54,7 +57,59 @@
 
 # UX Design
 
+## User Stories <p id="user-stories"></p>
+
+- As a GM/player, I want to supplement my game with mythic without the need for flipping through pages to find information.
+
+- As a GM/player, I want to use mythic without all of the usually involved bookkeeping.
+
+- As a player, I want a GM tool that can replace my group’s GM if they can not arrive at a session.
+
+- As a GM/player, I want the app to track all of my characters, plots, and threads. I do not want the immersion of the game stifled by having to think too much about what is happening to the
+story.
+
+- As a GM/player, I want any unnecessary dice rolls to be handled by the app. I should only be focused on my own character’s dice rolls.
+
+- As a Gm, I want my players to feel as if the story is unfolding naturally and not feel like I am pushing them towards one conclusion where their choices do not matter. 
+
+- As a GM/player, I want a clean, elegant app that is not cluttered with text. Anything to take me out of the immersive story is bad.
+
+All user's needs should be met by this app. Everything they need is on one page. If they forget anything the how to use modal window is just one click away. 
+
+There are no extra dice rolls for players, and they can play a session by themselves if their GM can not make it. 
+
+All characters and plot threads are tracked and referenced when needed by the app. There is no extra book-keeping involved. 
+
+There is plenty of random chance at work with mythic and yet the story should feel organic to the point that the players' choices are shaping the world around them. 
+
+All of the text that could clutter the app is contained in a modal window with its own navigatable table of contents. The app is clutter-free and is a true representation of the source material.
+
+  ## Typography <p id="typography"></p>
+  - <a href="https://fonts.google.com/specimen/Cinzel+Decorative?query=cinze">Cinzel Decorative</a> - Thematic font for Logo and any other headings and buttons.
+  - <a href="https://fonts.google.com/specimen/Raleway?query=ralewa">Raleway</a> - text compliments Cinzel very well. Used mostly for About section.
+  - <a href="https://fonts.google.com/specimen/Eater?query=Eater">Eater</a> - Any text generated in the oracle uses this text. I wanted the feeling that the answers were coming from another realm or a magic mirror - something like that.
+
+  ## Color <p id="color"></p>
+  Color is kept mostly black and white except for the background image which I think has a kind of pirate map/adventure map coffee stain to it. 
+  The main colors are:
+  - Black - Emulator Window
+  - Whitesmoke - text. I wanted to have a bone-white kind of color to any text in the emulator. As if the user was casting old runes.
+  - #e9e9e9 - how to section background-color - I like this because it makes the how to section look like a rule book! 
+  - Background image has a stained coffee kind of color to it.
+
+## Wireframes <p id="wireframes"></p>
+
+Wireframes for the app 
+- <a href="assets/wireframes/desktop-tablet.pdf">Desktop & Tablet View</a>
+- <a href="assets/wireframes/phone.pdf">Phone View</a>
+
+</section>
+
+<section id="features">
+
+# Features
 There were so many features I wanted to implement in this app, but due to time constraints and my own limitations in making apps, I focused on the MVP as the first release. The features for this release will focus entirely on the sourcebook. I will not add any additional features.  
+
 
 <img src="assets/images/features.png">
 
@@ -63,25 +118,7 @@ There were so many features I wanted to implement in this app, but due to time c
 In my research, I found a couple of apps that do the same thing as my app, but they are visually, extremely lackluster. I wanted to make my app thematic. It should feel as if it is part of the game. I was very careful in every step of making the app to make sure it was as immersive as possible.
 
 The layout is very simple. I wanted to experiment with tabs for this app, so I made the app all on one page. This means less time wasted trying to load pages and trying to find information. 
-
-</section>
-
-<section id="features">
-
-  # Features
-  ## General Features <p id="general-features"></p>
-  ### Fonts
-  - <a href="https://fonts.google.com/specimen/Cinzel+Decorative?query=cinze">Cinzel Decorative</a> - Thematic font for Logo and any other headings and buttons.
-  - <a href="https://fonts.google.com/specimen/Raleway?query=ralewa">Raleway</a> - text compliments Cinzel very well. Used mostly for About section.
-  - <a href="https://fonts.google.com/specimen/Eater?query=Eater">Eater</a> - Any text generated in the oracle uses this text. I wanted the feeling that the answers were coming from another realm or a magic mirror - something like that.
-
-  ### Color 
-  Color is kept mostly black and white except for the background image which I think has a kind of pirate map/adventure map coffee stain to it. 
-  The main colors are:
-  - Black - Emulator Window
-  - Whitesmoke - text. I wanted to have a bone-white kind of color to any text in the emulator. As if the user was casting old runes.
-  - #e9e9e9 - how to section background-color
-  - Background image has a stained coffee kind of color to it.
+  ## Existing Features <p id="general-features"></p>
 
   ## Background Image <p id="background"></p>
 
@@ -105,11 +142,15 @@ The layout is very simple. I wanted to experiment with tabs for this app, so I m
   <img src="assets/images/how-to-modal.png">
 
 
-  All of the text explaining how to use the app is found in a modal window that the user can open without going to a new page. 
+  All of the text explaining how to use the app is found in a modal window that the user can open without going to a new page. Overall I wanted it to feel like a rulebook, as many users of this app would be familiar with having 1-2 rulebooks open at all times to play a game. 
 
   It will darken the background to create contrast with the app and it has its own unique scrollbar which I feel will not distract from the aesthetics of the app.
 
-  This gave me a lot of freedom to write as much content as I wanted for the how-to-use section without cluttering up the site and affecting the user experience. The app can be quite complicated to use, so I am very pleased with the how-to section and how in-depth it went with explaining everything and giving examples of use. 
+  This gave me a lot of freedom to write as much content as I wanted for the how-to-use section without cluttering up the site and affecting the user experience. unfortunately, the how to section is to cramped on mobile view, so at smaller screen widths, the iframes are replaced with clickable links and some of the less important paragraphs will not be displayed.
+  
+   The app can be quite complicated to use, so I am very pleased with the how-to section and how in-depth it went with explaining everything and giving examples of use. 
+
+  
 
   ## Emulator <p id="emulator"></p>
 
@@ -182,9 +223,7 @@ threads(plot points) that are relevant to the adventure.
 
  The footer is extremely simple. It has links to some social media sites about me. 
 
- </section>
- 
- # Features to Impliment <p id="features-left"></p>
+## Features to Impliment <p id="features-left"></p>
 
  ### NPC Generator 
  A feature to generate non-playable characters with names and backstories. This is so the user will not have to pause the game and think of one by themselves. 
@@ -207,39 +246,8 @@ This would be useful for players who want to play but don't have access to dice
 ### Mythic Variations 1 & 2 
 There are another 2 books in the Mythic GM series that provide more options to players for using mythic. It would be great to implement them into this app. 
 
-
-# Wireframes <p id="wireframes"></p>
-
-Wireframes for the app 
-- <a href="assets/wireframes/desktop-tablet.pdf">Desktop & Tablet View</a>
-- <a href="assets/wireframes/phone.pdf">Phone View</a>
-
-# User Stories <p id="user stories"></p>
-
-- As a GM/player, I want to supplement my game with mythic without the need for flipping through pages to find information.
-
-- As a GM/player, I want to use mythic without all of the usually involved bookkeeping.
-
-- As a player, I want a GM tool that can replace my group’s GM if they can not arrive at a session.
-
-- As a GM/player, I want the app to track all of my characters, plots, and threads. I do not want the immersion of the game stifled by having to think too much about what is happening to the
-story.
-
-- As a GM/player, I want any unnecessary dice rolls to be handled by the app. I should only be focused on my own character’s dice rolls.
-
-- As a Gm, I want my players to feel as if the story is unfolding naturally and not feel like I am pushing them towards one conclusion where their choices do not matter. 
-
-- As a GM/player, I want a clean, elegant app that is not cluttered with text. Anything to take me out of the immersive story is bad.
-
-All user's needs should be met by this app. Everything they need is on one page. If they forget anything the how to use modal window is just one click away. 
-
-There are no extra dice rolls for players, and they can play a session by themselves if their GM can not make it. 
-
-All characters and plot threads are tracked and referenced when needed by the app. There is no extra book-keeping involved. 
-
-There is plenty of random chance at work with mythic and yet the story should feel organic to the point that the players' choices are shaping the world around them. 
-
-All of the text that could clutter the app is contained in a modal window with its own navigatable table of contents. The app is clutter-free and is a true representation of the source material.
+ </section>
+ 
 
 # Technologies Used <p id="tech"></p>
 
@@ -298,25 +306,26 @@ The steps I used to deploy the site:
 - under source heading click select main
 - The page will refresh with a blue background message that says the page is deployed and provide a link. If the message reads ready to be deployed, wait a few minutes and refresh the page. 
 
-How to run the code from the site 
-- Go to [github.com](https://www.github.com)
-- Log in to account
-- Click repositories
-- Click mythic_gm
-- Click the green code button that says Clone or download 
-- Click Download ZIP
-- Open IDE [replit](https://replit.com/~)
-- upload folder/files
+How to fork the repository
+- Go to [github.com](https://www.github.com) and login.
+- Click mythic_gm repository
+- in the top right of the page click the "fork" button
+- you will now have a copy of the repository in your github account.
 
 How to clone the repository
 - Go to [github.com](https://www.github.com)
 - Log in to account
 - Click repositories
-- Click mythic_gm
+- Click mythic_gm fork
 - Click the green code button that says Clone or download 
-- copy URL link 
-- open or create a repo 
-- go to terminal and type git clone and paste the link
+- to copy from HTTPS copy URL link "HTTPS". 
+- open terminal
+- go to directory where you want to save the files
+- type git clone and paste the link
+- press enter and the clone will be created
+
+
+More detailed instructions can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository#cloning-a-repository-to-github-desktop)
 
 
 # Credits <p id="credits"></p>
