@@ -33,7 +33,8 @@ const eventSubject = ["Goals", "Dreams", "Environment", "Outside", "Inside","Rea
   "Technology","Hope","Magic","Illusions","Portals","Danger","Weapons","Animals","Weather","Elements","Nature","The public","Leadership","Fame",
   "Anger","Information"];
 
-//Opening and closing the "How to use Mythic" Modal
+//Opening and closing the "How to use Mythic" Modal - lots of help from this tutorial 
+//https://www.w3schools.com/howto/howto_css_modals.asp
 
 // get how to section modal elements
 let howToModal = document.getElementById('how-to-modal');
@@ -153,7 +154,7 @@ let oddsBox = document.getElementById('odds-modal');
 let oddsButton = document.getElementById('set-odds-button');
 let chaosNumber = parseInt(document.getElementById("chaos-number").textContent) - 1; 
 
-// display the odds selector modal
+// display the odds selector modal - help from this tutorial - https://www.w3schools.com/howto/howto_js_quotes_slideshow.asp
 questionButton.onclick = function() {
   cancel(); //close previous display if any 
   oddsBox.style.display = "flex";
@@ -382,8 +383,8 @@ for (i = 0; i < sceneCloseBtn.length; i++) {
   };
 }
 
-//list tab script
-//list tab essentially contains two "to do" style lists. one for characters and one for threads.
+/*list tab script - help from this tutorial - https://www.w3schools.com/howto/howto_js_todolist.asp
+list tab essentially contains two "to do" style lists. one for characters and one for threads.*/
 
 // close button for list items
 let closeList = document.getElementsByClassName("close");
