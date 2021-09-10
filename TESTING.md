@@ -57,7 +57,6 @@ As a GM/player, I want any unnecessary dice rolls to be handled by the app. I sh
 - The scene, question, and event button and the app automatically selecting characters or threads eliminate any extra dice rolls by the player or GM. 
 
 As a Gm, I want my players to feel as if the story is unfolding naturally and not something I have pre-ordained. This is to give them the feeling that they are truly interacting with plot twists rather than feeling like I am pushing them down one linear path.
-As a GM/player/group, I want the option of immersive music in the background.
 - The player asks a question. The GM answers it by using the question button. It is a random answer based only on the odds. 
 - The GM says something unexpected occurs. The app automatically generates a focus for the random event, the event button will provide a cue as to what has happened. It is random and not likely to be the result of a predetermined storyline. 
 
@@ -66,7 +65,7 @@ As a GM/player, I want a clean elegant app that is not cluttered with text. Anyt
 
 # Responsive Testing 
 
-The app is fully responsive. I wanted to experiment more with vh and vw measurements in this app. The desktop and tablet view are both the same. 
+The app is fully responsive. I wanted to experiment more with vh and vw measurements in this app. The desktop and tablet view are both the same. The only problem I can see is if you tile your phone sideways and use the lists tab, any input will make the lists have a scroll bar straight away.  
 
 Media queries mainly deal with making the text smaller and making the viewport height larger for mobile. 
 
@@ -76,7 +75,7 @@ The app was tested using chrome dev tools and also on responsive test tool to ma
 ### How to use section 
 This is fully responsive - the only difference is that the iframes will change size at 870 px to 80% of the modal window. 
 
-The width and height of the modal will also change to between 85-90% on mobile devices to give the text more breathing room.
+The width and height of the modal will also change to between 85-90% on mobile devices to give the text more breathing room. The iframes will dissapear completely and be replaced with links to the video.
 
 ### Oracle tab
 
@@ -97,7 +96,7 @@ https://www.youtube.com/watch?v=JIy4kP-j44E
 
 # Browser Compatibility 
 
-The app was tested on the following browsers on desktop and mobile:
+The app was tested on the following browsers:
 
 - [Google Chrome](https://www.google.com/chrome/?brand=FHFK&gclid=CjwKCAjw092IBhAwEiwAxR1lRnrDJkW2rc2m-_DsqG2ISAAChH0tbKgopfm-3BMuide3ikPssZgvWhoCsVUQAvD_BwE&gclsrc=aw.ds)
 
@@ -125,7 +124,7 @@ The scroll bar sticks out slightly due to the border-radius on the modal window.
 
 <img src="assets/images/bug-scroll.png">
 
-The close button in the modal window sometimes obscures text a little. 
+The close and back to top button in the how to section window sometimes obscures text a little. 
 
 <img src="assets/images/bug-close.png">
 
