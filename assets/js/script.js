@@ -377,7 +377,7 @@ function addScene() {
     };
   }
 }
-
+// close the scene div
 let sceneCloseBtn = document.getElementsByClassName('scene-close');
 var i;
 for (i = 0; i < sceneCloseBtn.length; i++) {
@@ -388,6 +388,7 @@ for (i = 0; i < sceneCloseBtn.length; i++) {
 }
 
 //list tab script
+//list tab essentially contains two "to do" style lists. one for characters and one for threads.
 
 // close button for list items
 let closeList = document.getElementsByClassName("close");
@@ -400,17 +401,18 @@ for (i = 0; i < closeList.length; i++) {
 }
 
 // add to the character list
+//click
 let charAddBtn = document.getElementById("character-btn");
 charAddBtn.addEventListener("click", addChar)
-
+//on enter
 document.getElementById("char-input").addEventListener("keydown", function(event){
   if(event.key === "Enter"){
     addChar()
   }
 })
 
-let npcArray = [];
-
+let npcArray = []; //values typed in by user get stored in an array to be used by oracle tab
+// this will add the input from the user to the character/group list
 function addChar() {
   var li = document.createElement("LI");
   var inputValue = document.getElementById("char-input").value;
@@ -430,7 +432,7 @@ function addChar() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
-  // delete from array 
+  // delete list and from array 
   for (i = 0; i < closeList.length; i++) {
     closeList[i].onclick = function() {
       var div = this.parentElement;
@@ -446,24 +448,25 @@ function addChar() {
 
 
 // add to the thread list 
+//click
 let threadAddBtn = document.getElementById("thread-btn");
 threadAddBtn.addEventListener("click", addThread)
-
+// on enter 
 document.getElementById("thread-input").addEventListener("keydown", function(event){
   if(event.key === "Enter"){
     addThread()
   }
 })
-
+//user input stored in array to be used in oracle tab
 let threadArray = [];
-
+//this function will add the user input to a list to be displayed in emulator window
 function addThread() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("thread-input").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t); 
-  if (inputValue.match(/[0-9a-zA-z]/g)) { 
-    threadArray.push(inputValue);
+  if (inputValue.match(/[0-9a-zA-z]/g)) { //input validation
+    threadArray.push(inputValue); //add to array
     console.log(threadArray);
     document.getElementById("thread-ul").appendChild(li);
   } else {
@@ -476,7 +479,7 @@ function addThread() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
-  // add input to an array
+  // delete list and remove value from array 
   for (i = 0; i < closeList.length; i++) {
     closeList[i].onclick = function() {
       var div = this.parentElement;
