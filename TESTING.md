@@ -70,8 +70,13 @@ The app is fully responsive. I wanted to experiment more with vh and vw measurem
 
 Media queries mainly deal with making the text smaller and making the viewport height larger for mobile. 
 
+
+The app was tested using chrome dev tools and also on responsive test tool to make sure there were no responsiveness issues across different devices. 
+
 ### How to use section 
 This is fully responsive - the only difference is that the iframes will change size at 870 px to 80% of the modal window. 
+
+The width and height of the modal will also change to between 85-90% on mobile devices to give the text more breathing room.
 
 ### Oracle tab
 
@@ -85,14 +90,14 @@ The journal tab contents start at 3 divs per row but will change to block elemen
 The lists tab content, characters, and threads start as flex items taking roughly 70% and 30% respectively of the emulator window but will change to being block elements stacked at smaller screen width.
 
 
-## Video of Responsiveness Testing 
+## Video of Responsiveness Testing On google chrome
 
 https://www.youtube.com/watch?v=JIy4kP-j44E
 
 
 # Browser Compatibility 
 
-The app was tested on the following browsers:
+The app was tested on the following browsers on desktop and mobile with only two issues found:
 
 - [Google Chrome](https://www.google.com/chrome/?brand=FHFK&gclid=CjwKCAjw092IBhAwEiwAxR1lRnrDJkW2rc2m-_DsqG2ISAAChH0tbKgopfm-3BMuide3ikPssZgvWhoCsVUQAvD_BwE&gclsrc=aw.ds)
 
@@ -104,11 +109,24 @@ The app was tested on the following browsers:
 
 - [Safari](https://www.apple.com/uk/safari/)
 
-The site looks great on all browsers and I could find two main issues. 
-
 - minor issue - The color is slightly more grey and less vibrant on edge and firefox. 
-- major issue - There is a huge difference in how the scroll bars render in some browsers. 
 
+- major issue - There is a big difference in how the scroll bars render in some browsers. 
+
+# Bugs 
+
+When the blur animation is finished, depending on the browser it can be highlighted and displayed again that way. 
+
+<img src="assets/images/bug-highlight.png">
+
+
+The scroll bar sticks out slightly due to the border-radius on the modal window. 
+
+<img src="assets/images/bug-scroll.png">
+
+The close button in the modal window sometimes obscures text a little. 
+
+<img src="assets/images/bug-close.png">
 
 ### How to use section scrollbar
 In Google Chrome, Safari, opera, and edge there is little to no difference in how it is rendered. It is a thin black line. In firefox, it is rendered as a grey line, slightly fatter with less opacity. 
@@ -155,21 +173,3 @@ edge and safari
 Edge and Safari have no background and the scroll bar is half on the emulator window and half outside. 
 
 <img src="assets/images/edge-journal-scroll.png">
-
-
-# Bugs 
-
-When the blur animation is finished, depending on the browser it can be highlighted and displayed again that way. 
-
-<img src="assets/images/bug-highlight.png">
-
-
-The scroll bar sticks out slightly due to the border-radius on the modal window. 
-
-<img src="assets/images/bug-scroll.png">
-
-The close button in the modal window sometimes obscures text a little. 
-
-<img src="assets/images/bug-close.png">
-
-Firefox scroll bar not rendering on black background.
