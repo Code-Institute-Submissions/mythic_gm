@@ -130,7 +130,6 @@ sceneGenerateButton.onclick = function() {
     displayBox.innerHTML = "<h3 class='word'>unmodified</h3>"; //below means no change
   } else if(randomInt % 2 == 0){
     let randomIntFocus= (Math.floor(Math.random() * 11)); // this number is to pick a random variable from the event focus array.
-    console.log(randomIntFocus); // to check if the funciton is working as described
     let eventFocusValue = eventFocus[randomIntFocus];
     let npcFocus = npcArray[Math.floor(Math.random() * npcArray.length)]; //if there are any variables in this array it will choose one at random
     let threadFocus = threadArray[Math.floor(Math.random() * threadArray.length)]; //if there are any variables in this array it will choose one at random
@@ -251,9 +250,7 @@ a random event with a focus. */
 
 function generateAnswer(){
   randomInt = (Math.floor(Math.random() * 100 +1 ));
-  console.log(randomInt);
   if(randomInt % 11 == 0 && (randomInt / 11) < (chaosNumber +1)){
-    console.log('true');
     randomEventAnswer();
   } else {
     if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
@@ -273,12 +270,10 @@ It has to account for having an additional npc focus or an additional thread foc
 
 function randomEventAnswer() {
   let randomIntFocus= (Math.floor(Math.random() * 11));
-  console.log(randomIntFocus);
   let eventFocusValue = eventFocus[randomIntFocus];
   let npcFocus = npcArray[Math.floor(Math.random() * npcArray.length)];
   let threadFocus = threadArray[Math.floor(Math.random() * threadArray.length)];
   let randomInt = (Math.floor(Math.random() * 100 +1 ));
-  console.log(randomInt);
   // no additional focus beyond eventFocus array
   if(randomIntFocus < 5 || npcArray.length === 0 || threadArray.length === 0) {
     if (randomInt <= (oddIs[chaosNumber]) && randomInt < (oddIs[chaosNumber] / 5)){
@@ -420,7 +415,6 @@ function addChar() {
   li.appendChild(t);
   if (inputValue.match(/[0-9a-zA-z]/g)) { // input validation
     npcArray.push(inputValue);
-    console.log(npcArray); // check if function is working
     document.getElementById("char-ul").appendChild(li);
   } else {
     alert("You must write something!");
@@ -439,7 +433,6 @@ function addChar() {
       var value = this.parentElement.firstChild.textContent; 
       var index = npcArray.indexOf(value);
       npcArray.splice(index, 1);
-      console.log(npcArray);
       div.style.display = "none";
     };
   }
@@ -467,7 +460,6 @@ function addThread() {
   li.appendChild(t); 
   if (inputValue.match(/[0-9a-zA-z]/g)) { //input validation
     threadArray.push(inputValue); //add to array
-    console.log(threadArray);
     document.getElementById("thread-ul").appendChild(li);
   } else {
     alert("You must write something!");
@@ -486,7 +478,6 @@ function addThread() {
       var value = this.parentElement.firstChild.textContent;
       var index = threadArray.indexOf(value);
       threadArray.splice(index, 1);
-      console.log(threadArray);
       div.style.display = "none";
     };
   }
