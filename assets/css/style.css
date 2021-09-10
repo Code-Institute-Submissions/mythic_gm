@@ -251,7 +251,7 @@ iframe {
   animation-duration: 6s;
 }
 
-@keyframes blur { /* display text in a blur in blur out animation*/
+@keyframes blur { /* display text in a blur in blur out animation - https://css-tricks.com/fun-with-blurred-text/ - https://codepen.io/onge/pen/KwdZpE*/
 	0%	{text-shadow:  0 0 90px #fff; opacity:0;}
 	5%	{text-shadow:  0 0 80px #fff;}
   10%	{text-shadow:  0 0 70px #fff;}
